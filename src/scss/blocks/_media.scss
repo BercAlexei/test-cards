@@ -1,0 +1,142 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .title {
+        font-size: 54px;
+        line-height: 60px;
+        width: 630px;
+    }
+
+    .promo {
+        min-height: 340px;
+        padding: 100px 0 120px 0;
+    }
+    .cards {
+        padding: 80px 0 100px 0;
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .card {
+        min-height: 470px;
+        &__category {
+            top: 12px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    .btn {
+        width: 150px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .title {
+        font-size: 46px;
+        line-height: 48px;
+        width: 470px;
+    }
+
+    .promo {
+        min-height: 276px;
+        padding: 80px 0 100px 0;
+    }
+
+    .card {
+        &__category {
+            font-size: 12px;
+            line-height: 20px;
+            top: 12px;
+        }
+        &__img {
+            height: 150px;
+        }
+        &__author {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .btn {
+        width: 140px;
+        height: 36px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 546px;
+    }
+
+    .promo {
+        min-height: 236px;
+        padding: 60px 0 80px 0;
+    }
+
+    .title {
+        width: 450px;
+    }
+
+    .cards {
+        padding: 50px 0 60px 0;
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        min-height: 418px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 290px;
+    }
+
+    .promo {
+        min-height: 274px;
+    } 
+
+    .title {
+        width: 290px;
+    }
+
+    .card {
+        min-height: 448px;
+        padding: 16px 16px 20px 16px;
+        &__category {
+            top: 0;
+        }
+        &__img {
+            height: 140px;
+        }
+        &__author {
+            margin-top: 12px;
+        }
+        &__text {
+            margin-top: 10px;
+        }
+    }
+    .btn {
+        left: 16px;
+        bottom: 20px;
+    }
+}

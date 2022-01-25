@@ -1,0 +1,19 @@
+.btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #00B6DD;
+    border: none;
+    width: 160px;
+    height: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: #FFFFFF;
+    &_blue {
+        background: #081580;
+    }
+} 

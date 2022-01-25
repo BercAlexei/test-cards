@@ -1,0 +1,58 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "cat": "Category | Marketing",
+            "color": "#D3D8E4",
+            "img": "",
+            "author": "Adam Sendler",
+            "title": "Solutions for people like you like people",
+            "descr": "How can we help your technology and services business develop a revenue engine based"
+        },
+        {
+            "id": 2,
+            "cat": "Category",
+            "color": "#D3D8E4",
+            "img": "img/cards/meritt.jpg",
+            "author": "Adam Sendler",
+            "title": "Solutions for people like you like people",
+            "descr": "How can we help your technology and services business develop a revenue engine based"
+        },
+        {
+            "id": 3,
+            "cat": "Category | Marketing",
+            "color": "#FF779A",
+            "img": "",
+            "author": "Adam Sendler",
+            "title": "Solutions for people",
+            "descr": "How can we help your technology and services business develop a revenue engine based"
+        },
+        {
+            "id": 4,
+            "cat": "Category | Marketing",
+            "color": "#00B6DD",
+            "img": "",
+            "author": "Adam Sendler",
+            "title": "Solutions for people",
+            "descr": "How can we help your technology"
+        },
+        {
+            "id": 5,
+            "cat": "Category | Marketing",
+            "color": "#D3D8E4",
+            "img": "img/cards/chris.jpg",
+            "author": "Adam Sendler",
+            "title": "Solutions for people like you like people",
+            "descr": "How can we help your technology and services business develop a revenue engine based"
+        },
+        {
+            "id": 6,
+            "cat": "Category",
+            "color": "#D3D8E4",
+            "img": "",
+            "author": "Adam Sendler",
+            "title": "Solutions for people like you like people",
+            "descr": "How can we help your technology and services business develop a revenue engine based"
+        }
+    ]
+  }
