@@ -76,7 +76,6 @@ function clickCard() {
       category.classList.add('card__category_blue');
       author.classList.add('card__author_blue');
       btn.classList.add('btn_blue');
-      console.log(category, author, btn);
     }
   });
 }
