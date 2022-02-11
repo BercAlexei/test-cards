@@ -1,0 +1,18 @@
+.column {
+  &_about {
+    @include make-col-ready;
+    @include make-col(6);
+
+    @include breakpoint-lg {
+      @include make-col(6);
+    }
+
+    @include breakpoint-md {
+      @include make-col(10);
+    }
+
+    @include breakpoint-ssm {
+      @include make-col(12);
+    }
+  }
+}

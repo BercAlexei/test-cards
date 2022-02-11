@@ -4,3 +4,23 @@ $text-color: #010101;
 $white: #fff;
 $black: #000;
 $border-color: #D3D8E4;
+
+$breakpoints: (
+  xs: '480px',
+  ssm: '575px',
+  sm: '767px',
+  md: '991px',
+  lg: '1199px',
+  xl: '1440px',
+); // размер окна браузера
+
+$container-width: (
+  sm: 290px,
+  ssm: 546px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px
+); // ширина контейнера (без учета строки - я про -15px)
+
+$grid-gutter-width: 30px; // отсуп между колонками
+$grid-columns: 12; // количество колонок

@@ -4,7 +4,14 @@
     padding: 9px 35px 11px 35px;
     @include fonts (normal, normal, 13px, 20px, .8px, $white);
     text-align: center;
+    
     &_blue {
         background: $second-color;
+    }
+    &_bgnone {
+        margin-left: 16px;
+        padding: 7.5px 30px 9.5px 30px;
+        background: inherit;
+        border: 2px solid $main-color;
     }
 } 

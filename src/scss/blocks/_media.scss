@@ -1,7 +1,4 @@
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
+@media (max-width: 1199px) {
 
     .title {
         font-size: 54px;
@@ -9,6 +6,10 @@
         
         &_promo {
             width: 630px;
+        }
+        &_about {
+            font-size: 54px;
+            line-height: 60px;
         }
     }
 
@@ -31,12 +32,16 @@
             line-height: 28px;
         }
     }
+    .about {
+        &__descr {
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
 }
 
 @media (max-width: 991px) {
-    .container {
-        max-width: 720px;
-    }
 
     .title {
         font-size: 46px;
@@ -44,7 +49,11 @@
         &_promo {
             width: 470px;
         }
-        
+        &_about {
+            font-size: 46px;
+            line-height: 48px;
+            text-align: center;
+        }
     }
 
     .promo {
@@ -82,12 +91,25 @@
         font-size: 12px;
         line-height: 18px;
     }
+
+    .about {
+        &__descr {
+            text-align: center;
+            font-size: 18px;
+            line-height: 26px;
+            margin-top: 14px;
+        }
+        &__btns {
+            text-align: center;
+        }
+        &__lens {
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
-    .container {
-        max-width: 546px;
-    }
 
     .promo {
         padding: 60px 0 80px 0;
@@ -97,7 +119,6 @@
         &_promo {
             width: 450px;
         }
-        
     }
 
     .cards {
@@ -109,15 +130,18 @@
 }
 
 @media (max-width: 575px) {
-    .container {
-        max-width: 290px;
-    }
 
     .title {
         &_promo {
            width: 290px; 
         }
-        
+    }
+    .btn {
+        width: 100%;
+        &_bgnone {
+            margin: 0;
+            margin-top: 16px;
+        }
     }
     .cards {
         &__wrapper {
@@ -137,6 +161,11 @@
         }
         &__text {
             margin-top: 10px;
+        }
+    }
+    .about {
+        &__lens {
+            margin-top: 8px;
         }
     }
 }
