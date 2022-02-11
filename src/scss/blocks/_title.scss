@@ -1,12 +1,10 @@
 .title {
     position: relative;
-    font-size: 62px;
-    line-height: 68px;
-    font-weight: bold;
+    @include fonts(normal, bold, 62px, 68px, 1.4px, #fff);
     text-align: center;
-    letter-spacing: 1.4px;
-    color: #FFFFFF;
-    width: 750px;
     left: 50%;
     transform: translateX(-50%);
+    &_promo {
+        width: 750px;
+    } 
 }

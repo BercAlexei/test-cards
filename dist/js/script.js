@@ -31,22 +31,30 @@ class Card {
                 <div class="card__category">
                     ${this.cat}
                 </div>
-                <div class="card__img" style="background: ${this.color} url('${this.img}') center center / cover no-repeat;">
+                <div class="card__content">
+                    <div class="card__img" style="background: ${this.color} url('${this.img}') center center / cover no-repeat;">
+                    </div>
+
+                    <div class="card__author">
+                        <a href="#">
+                            ${this.author}
+                        </a>
+                    </div>
+
+                    <div class="card__title">
+                        ${this.title}
+                    </div>
+
+                    <div class="card__text">
+                        ${this.descr}
+                    </div>
                 </div>
-                <div class="card__author">
-                    <a href="#">
-                        ${this.author}
-                    </a>
+                <div class="card__btn">
+                    <button class="btn" data-id="${this.id}">
+                        Call to action
+                    </button>
                 </div>
-                <div class="card__title">
-                    ${this.title}
-                </div>
-                <div class="card__text">
-                   ${this.descr}
-                </div>
-                <button class="btn" data-id="${this.id}">
-                    Call to action
-                </button>
+                
         `;
     cardsWrapper.append(card);
   }

@@ -2,24 +2,23 @@
     background: #FFFFFF;
     border: 1px solid #D3D8E4;
     padding: 30px;
-    min-height: 500px;
+    height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
     &__category {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 22px;
+        @include fonts(normal, normal, 13px, 22px, 1.2px, #fff);
         text-align: center;
-        letter-spacing: 1.2px;
         text-transform: uppercase;
-        color: #FFFFFF;
         position: absolute;
         top: 18px;
         left: 0;
-        background: #00B6DD;
+        background: $main-color;
         padding: 6px 15px 8px 16px;
         &_blue {
-            background: #081580;
+            background: $second-color;
         }
     }
     &__img {
@@ -30,36 +29,21 @@
     &__author {
         margin-top: 20px;
         a {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 20px;
-            letter-spacing: 0.8px;
-            color: #00B6DD;
+            @include fonts(normal, normal, 13px, 20px, .8px, $main-color);
             text-decoration: none;
         }
         &_blue {
             a {
-                color: #081580;
+                color: $second-color;
             }
         }
     }
     &__title {
         margin-top: 6px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 22px;
-        line-height: 30px;
-        letter-spacing: 1.2px;
-        color: #010101;
+        @include fonts(normal, normal, 22px, 30px, 1.2px, $text-color);
     }
     &__text {
         margin-top: 16px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.8px;
-        color: #010101;
+        @include fonts(normal, normal, 16px, 26px, .8px, $text-color);
     }
 }

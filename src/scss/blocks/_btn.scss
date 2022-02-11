@@ -1,18 +1,9 @@
 .btn {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    background: #00B6DD;
+    background: $main-color;
     border: none;
-    width: 160px;
-    height: 40px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 20px;
+    padding: 9px 35px 11px 35px;
+    @include fonts (normal, normal, 13px, 20px, .8px, #fff);
     text-align: center;
-    letter-spacing: 0.8px;
-    color: #FFFFFF;
     &_blue {
         background: #081580;
     }

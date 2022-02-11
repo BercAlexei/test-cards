@@ -6,7 +6,10 @@
     .title {
         font-size: 54px;
         line-height: 60px;
-        width: 630px;
+        
+        &_promo {
+            width: 630px;
+        }
     }
 
     .promo {
@@ -17,10 +20,10 @@
         padding: 80px 0 100px 0;
         &__wrapper {
             grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 470px;
         }
     }
     .card {
-        min-height: 470px;
         &__category {
             top: 12px;
         }
@@ -28,9 +31,6 @@
             font-size: 20px;
             line-height: 28px;
         }
-    }
-    .btn {
-        width: 150px;
     }
 }
 
@@ -42,14 +42,21 @@
     .title {
         font-size: 46px;
         line-height: 48px;
-        width: 470px;
+        &_promo {
+            width: 470px;
+        }
+        
     }
 
     .promo {
         min-height: 276px;
         padding: 80px 0 100px 0;
     }
-
+    .cards {
+        &__wrapper {
+            grid-auto-rows: 440px;
+        }
+    }
     .card {
         &__category {
             font-size: 12px;
@@ -73,8 +80,6 @@
         }
     }
     .btn {
-        width: 140px;
-        height: 36px;
         font-size: 12px;
         line-height: 18px;
     }
@@ -91,18 +96,17 @@
     }
 
     .title {
-        width: 450px;
+        &_promo {
+            width: 450px;
+        }
+        
     }
 
     .cards {
         padding: 50px 0 60px 0;
         &__wrapper {
-            grid-template-columns: 1fr;
+            grid-auto-rows: 448px;
         }
-    }
-
-    .card {
-        min-height: 418px;
     }
 }
 
@@ -116,11 +120,17 @@
     } 
 
     .title {
-        width: 290px;
+        &_promo {
+           width: 290px; 
+        }
+        
     }
-
+    .cards {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
     .card {
-        min-height: 448px;
         padding: 16px 16px 20px 16px;
         &__category {
             top: 0;
@@ -134,9 +144,5 @@
         &__text {
             margin-top: 10px;
         }
-    }
-    .btn {
-        left: 16px;
-        bottom: 20px;
     }
 }
