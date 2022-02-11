@@ -9,13 +9,14 @@ export default class Card {
         this.descr = descr
     }
     render() {
-        const cardsWrapper = document.querySelector('.cards__wrapper');
+        const cardsWrapper = document.querySelector('.row_cards');
 
         let card = document.createElement('div');
 
-        card.classList.add('card')
+        card.classList.add('column', 'column_cards')
 
         card.innerHTML = `
+            <div class="card">
                 <div class="card__category">
                     ${this.cat}
                 </div>
@@ -42,7 +43,7 @@ export default class Card {
                         Call to action
                     </button>
                 </div>
-                
+            </div>      
         `
         cardsWrapper.append(card)
     }
