@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    max-height: 500px;
     &__category {
         @include fonts(normal, normal, 13px, 22px, 1.2px, $white);
         text-align: center;
@@ -45,5 +46,16 @@
     &__text {
         margin-top: 16px;
         @include fonts(normal, normal, 16px, 26px, .8px, $text-color);
+    }
+    &__btn {
+        margin-top: 30px;
+
+        @include breakpoint-md {
+            margin-top: 26px;
+          }
+        
+          @include breakpoint-sm {
+            margin-top: 20px;
+          }
     }
 }
