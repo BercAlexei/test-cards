@@ -1,6 +1,6 @@
 .title {
     position: relative;
-    @include fonts(normal, bold, 62px, 68px, 1.4px, #fff);
+    @include fonts(normal, bold, 62px, 68px, 1.4px, $white);
     text-align: center;
     left: 50%;
     transform: translateX(-50%);

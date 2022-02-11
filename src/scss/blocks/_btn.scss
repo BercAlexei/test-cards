@@ -2,9 +2,9 @@
     background: $main-color;
     border: none;
     padding: 9px 35px 11px 35px;
-    @include fonts (normal, normal, 13px, 20px, .8px, #fff);
+    @include fonts (normal, normal, 13px, 20px, .8px, $white);
     text-align: center;
     &_blue {
-        background: #081580;
+        background: $second-color;
     }
 } 
