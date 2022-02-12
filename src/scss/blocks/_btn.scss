@@ -4,7 +4,7 @@
     padding: 9px 35px 11px 35px;
     @include fonts (normal, normal, 13px, 20px, .8px, $white);
     text-align: center;
-    
+    transition: all .5s;
     &_blue {
         background: $second-color;
     }
@@ -13,5 +13,8 @@
         padding: 7.5px 30px 9.5px 30px;
         background: inherit;
         border: 2px solid $main-color;
+    }
+    &:hover {
+        box-shadow: 1px 1px 15px $main-color;
     }
 } 

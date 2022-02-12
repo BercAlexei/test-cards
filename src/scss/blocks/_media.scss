@@ -2,10 +2,7 @@
     .title {
         font-size: 54px;
         line-height: 60px;
-        
-        &_promo {
-            width: 630px;
-        }
+
         &_about {
             font-size: 54px;
             line-height: 60px;
@@ -36,9 +33,6 @@
     .title {
         font-size: 46px;
         line-height: 48px;
-        &_promo {
-            width: 470px;
-        }
         &_about {
             font-size: 46px;
             line-height: 48px;
@@ -91,19 +85,10 @@
 }
 
 @media (max-width: 767px) {
-    .title {
-        &_promo {
-            width: 450px;
-        }
-    }
+
 }
 
 @media (max-width: 575px) {
-    .title {
-        &_promo {
-           width: 290px; 
-        }
-    }
 
     .btn {
         width: 100%;
