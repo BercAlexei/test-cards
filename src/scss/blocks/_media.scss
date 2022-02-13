@@ -86,6 +86,32 @@
 
 @media (max-width: 767px) {
 
+    .card {
+        padding: 28px;
+        &__img {
+            height: 150px;
+        }
+        &__author {
+            margin-top: 18px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        &__text {
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__btns {
+            margin-top: 26px;
+        }
+    }
+    .btn {
+        padding: 8px 28px 10px;
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 @media (max-width: 575px) {
@@ -111,6 +137,9 @@
         }
         &__text {
             margin-top: 10px;
+        }
+        &__btns {
+            margin-top: 20px;
         }
     }
 

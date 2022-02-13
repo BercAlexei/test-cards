@@ -110,7 +110,7 @@
   @mixin make-container { // ширина контейнера
     width: map-get($container-width, xl) !important;
     margin: 0 auto !important;
-    
+
     @include breakpoint-lg {
       width: map-get($container-width, lg) !important;
     }
@@ -120,10 +120,6 @@
     }
 
     @include breakpoint-sm {
-      width: map-get($container-width, ssm) !important;
-    }
-
-    @include breakpoint-ssm { // встает на всю ширину окна, резиновый
       padding-left: calc($grid-gutter-width / 2) !important;
       padding-right: calc($grid-gutter-width / 2) !important;
       width: auto !important;
