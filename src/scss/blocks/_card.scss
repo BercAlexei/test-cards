@@ -18,6 +18,7 @@
         left: 0;
         background: map-get($colors, primary);
         padding: 6px 15px 8px 16px;
+        z-index: 2;
         &_blue {
             background: map-get($colors, secondary);
         }
@@ -36,25 +37,25 @@
 
     &__content {
         &-img {
-            height: 170px;
-            width: 100%;
-            @include breakpoint-md {
-                height: 150px;
-            }
-            @include breakpoint-sm {
-                height: 150px;
-            }
-            @include breakpoint-ssm {
-                height: 140px;
+            position: relative;
+            &::before {
+				display: block;
+                position: static;
+                content: '';
+                padding: 50% 0 0;
             }
         }
     }
 
     &__img {
         background: map-get($colors, black);
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     &__author {

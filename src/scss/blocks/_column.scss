@@ -1,6 +1,15 @@
 .column {
   @include make-col-ready;
 
+  &_left {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &_mt-30 {
+    margin-top: 30px;
+  }
+
   @for $i from 1 through 12 {
     &_xxl-#{$i} {
       @include make-col($i);
@@ -15,33 +24,28 @@
     }
   }
 
-  // @include breakpoint-md {
-  //   &_md-10 {
-  //     justify-content: center;
-  //     @include make-col(10);
-  //   }
-  // }
-
-  // @include breakpoint-sm {
-  //   &_sm-10 {
-  //     @include make-col(10);
-  //   }
-  // }
-
-  // @include breakpoint-ssm {
-  //   &_ssm-12 {
-  //     @include make-col(12);
-  //   }
-  // }
-
-
-
-  &_left {
-    display: flex;
-    justify-content: flex-end;
+  @include breakpoint-md {
+    @for $i from 1 through 12 {
+      &_md-#{$i} {
+        justify-content: center;
+        @include make-col($i);
+      }
+    }
   }
 
-  &_mt-30 {
-    margin-top: 30px;
+  @include breakpoint-sm {
+    @for $i from 1 through 12 {
+      &_sm-#{$i} {
+        @include make-col($i);
+      }
+    }
+  }
+
+  @include breakpoint-ssm {
+    @for $i from 1 through 12 {
+      &_ssm-#{$i} {
+        @include make-col($i);
+      }
+    }
   }
 }
