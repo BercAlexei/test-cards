@@ -1,11 +1,24 @@
 .title {
     position: relative;
-    @include fonts(normal, bold, 62px, 68px, 1.4px, $light);
+    @include fonts(normal, bold, 62px, 68px, 1.4px, map-get($colors, light));
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    &_about {
-        color: $main-color;
+    &_blue {
+        color: map-get($colors, main-color);
         text-align: left;
+    }
+
+    @include breakpoint-lg {
+        font-size: 54px;
+        line-height: 60px;
+    }
+
+    @include breakpoint-md {
+        font-size: 46px;
+        line-height: 48px;
+        &_center {
+            text-align: center;
+        }
     }
 }

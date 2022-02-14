@@ -1,20 +1,39 @@
 .btn {
-    background: $main-color;
+    background: map-get($colors, main-color);
     border: none;
     padding: 9px 35px 11px 35px;
-    @include fonts (normal, normal, 13px, 20px, 0.8px, $light);
+    @include fonts (normal, normal, 13px, 20px, 0.8px, map-get($colors, light));
     text-align: center;
     transition: all .5s;
     &_blue {
-        background: $second-color;
+        background: map-get($colors, second-color);
     }
     &_bgnone {
         margin-left: 16px;
         padding: 7.5px 30px 9.5px 30px;
         background: inherit;
-        border: 2px solid $main-color;
+        border: 2px solid map-get($colors, main-color);
     }
     &:hover {
-        box-shadow: 1px 1px 15px $main-color;
+        box-shadow: 1px 1px 15px map-get($colors, main-color);
+    }
+
+    @include breakpoint-md {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    @include breakpoint-sm {
+        padding: 8px 28px 10px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    @include breakpoint-ssm {
+        width: 100%;
+        &_bgnone {
+            margin: 0;
+            margin-top: 16px;
+        }
     }
 } 

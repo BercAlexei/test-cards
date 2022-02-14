@@ -1,5 +1,5 @@
 export default function clickCard () {
-    let cards = document.querySelector('.row_cards');
+    let cards = document.querySelector('.cards__wrapper');
 
     cards.addEventListener('click', (event) => {
         if(event.target.getAttribute('data-id') || event.target.tagName == 'A') {

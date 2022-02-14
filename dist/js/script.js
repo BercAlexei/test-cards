@@ -17,23 +17,31 @@ class Card {
     this.id = id;
     this.cat = cat;
     this.color = color;
-    this.img = img;
     this.author = author;
     this.title = title;
     this.descr = descr;
+
+    this.img = function imgRender() {
+      if (img) {
+        return `<img class="card__img" src="${img}" alt="image" loading="lazy">`;
+      } else {
+        return '';
+      }
+    };
   }
 
   render() {
-    const cardsWrapper = document.querySelector('.row_cards');
+    const cardsWrapper = document.querySelector('.cards__wrapper');
     let card = document.createElement('div');
-    card.classList.add('column', 'column_cards');
+    card.classList.add('column', 'column_xxl-4', 'column_lg-6', 'column_ssm-12', 'column_ssm-12', 'column_mt-30');
     card.innerHTML = `
             <div class="card">
                 <div class="card__category">
                     ${this.cat}
                 </div>
                 <div class="card__content">
-                    <div class="card__img" style="background: ${this.color} url('${this.img}') center center / cover no-repeat;">
+                    <div class="card__content-img" style="background:${this.color}">
+                        ${this.img()}
                     </div>
 
                     <div class="card__author">
@@ -75,7 +83,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ clickCard; }
 /* harmony export */ });
 function clickCard() {
-  let cards = document.querySelector('.row_cards');
+  let cards = document.querySelector('.cards__wrapper');
   cards.addEventListener('click', event => {
     if (event.target.getAttribute('data-id') || event.target.tagName == 'A') {
       let cardTarget = event.target.closest('.card');
