@@ -107,7 +107,8 @@
     }
   }
   
-  @mixin make-container { // ширина контейнера
+  @mixin make-container {
+    position: relative; // ширина контейнера
     width: map-get($container-width, xl) !important;
     margin: 0 auto !important;
 

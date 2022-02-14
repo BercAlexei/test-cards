@@ -9,13 +9,12 @@
 }
 
 .container {
-    position: relative;
     @include make-container;
 }
 
 @import 'blocks/row';
 @import 'blocks/column';
-@import 'blocks/promo';
+@import 'blocks/hero';
 @import 'blocks/title';
 @import 'blocks/cards';
 @import 'blocks/card';

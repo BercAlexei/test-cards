@@ -2,7 +2,7 @@
     background: $main-color;
     border: none;
     padding: 9px 35px 11px 35px;
-    @include fonts (normal, normal, 13px, 20px, .8px, $white);
+    @include fonts (normal, normal, 13px, 20px, 0.8px, $light);
     text-align: center;
     transition: all .5s;
     &_blue {
