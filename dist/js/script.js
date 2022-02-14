@@ -58,8 +58,8 @@ class Card {
                         ${this.descr}
                     </div>
                 </div>
-                <div class="card__btn">
-                    <button class="btn" data-id="${this.id}">
+                <div class="card__button">
+                    <button class="button" data-id="${this.id}">
                         Call to action
                     </button>
                 </div>
@@ -89,10 +89,10 @@ function clickCard() {
       let cardTarget = event.target.closest('.card');
       let category = cardTarget.querySelector('.card__category'),
           author = cardTarget.querySelector('.card__author'),
-          btn = cardTarget.querySelector('.btn');
+          btn = cardTarget.querySelector('.button');
       category.classList.toggle('card__category_blue');
       author.classList.toggle('card__author_blue');
-      btn.classList.toggle('btn_blue');
+      btn.classList.toggle('button_bg-blue');
     }
   });
 }

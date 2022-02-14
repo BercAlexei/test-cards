@@ -5,8 +5,8 @@
     left: 50%;
     transform: translateX(-50%);
     
-    &_blue {
-        color: map-get($colors, main-color);
+    &_c-blue {
+        color: map-get($colors, primary);
         text-align: left;
     }
 
@@ -18,7 +18,7 @@
     @include breakpoint-md {
         font-size: 46px;
         line-height: 48px;
-        &_center {
+        &_ai-center {
             text-align: center;
         }
     }

@@ -46,8 +46,8 @@ export default class Card {
                         ${this.descr}
                     </div>
                 </div>
-                <div class="card__btn">
-                    <button class="btn" data-id="${this.id}">
+                <div class="card__button">
+                    <button class="button" data-id="${this.id}">
                         Call to action
                     </button>
                 </div>

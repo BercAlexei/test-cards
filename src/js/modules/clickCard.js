@@ -7,11 +7,11 @@ export default function clickCard () {
 
             let category = cardTarget.querySelector('.card__category'),
                 author = cardTarget.querySelector('.card__author'),
-                btn = cardTarget.querySelector('.btn');
+                btn = cardTarget.querySelector('.button');
             
             category.classList.toggle ('card__category_blue')
             author.classList.toggle ('card__author_blue')
-            btn.classList.toggle ('btn_blue')
+            btn.classList.toggle ('button_bg-blue')
         }
     })
 }

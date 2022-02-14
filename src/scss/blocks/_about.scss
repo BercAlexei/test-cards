@@ -1,45 +1,53 @@
 .about {
     padding: 100px 0;
-    background: #010101;
+    background: map-get($colors, dark);
 
-    &__descr {
+    &__text {
         margin-top: 20px;
         @include fonts(normal, normal, 20px, 28px, 1.2px, map-get($colors, light));
-    }
 
-    &__btns {
-        margin-top: 30px;
-    }
-    
-    &__img {
-        max-width: 100%;
-        max-height: 380px;
-    }
-
-    @include breakpoint-lg {
-        padding: 80px 0;
-        &__descr {
+        @include breakpoint-lg {
             margin-top: 20px;
             font-size: 20px;
             line-height: 28px;
         }
-    }
 
-    @include breakpoint-md {
-        padding: 70px 0;
-        &__descr {
+        @include breakpoint-md {
             text-align: center;
             font-size: 18px;
             line-height: 26px;
             margin-top: 14px;
         }
-        &__btns {
+    }
+
+    &__buttons {
+        margin-top: 30px;
+        
+        @include breakpoint-md {
             text-align: center;
         }
-        &__img {
+    }
+    
+    &__img {
+        max-width: 100%;
+        max-height: 380px;
+
+        @include breakpoint-md {
             text-align: center;
             margin-top: 40px;
         }
+
+        @include breakpoint-ssm {
+            margin-top: 8px;
+        }
+    }
+
+    @include breakpoint-lg {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-md {
+        padding: 70px 0;
     }
 
     @include breakpoint-sm {
@@ -48,8 +56,5 @@
 
     @include breakpoint-ssm {
         padding: 50px 0;
-        &__img {
-            margin-top: 8px;
-        }
     }
 }

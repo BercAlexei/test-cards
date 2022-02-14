@@ -1,9 +1,40 @@
 .column {
   @include make-col-ready;
 
-  &_xxl-4 {
-    @include make-col(4);
+  @for $i from 1 through 12 {
+    &_xxl-#{$i} {
+      @include make-col($i);
+    }
   }
+
+  @include breakpoint-lg {
+    @for $i from 1 through 12 {
+      &_lg-#{$i} {
+        @include make-col($i);
+      }
+    }
+  }
+
+  // @include breakpoint-md {
+  //   &_md-10 {
+  //     justify-content: center;
+  //     @include make-col(10);
+  //   }
+  // }
+
+  // @include breakpoint-sm {
+  //   &_sm-10 {
+  //     @include make-col(10);
+  //   }
+  // }
+
+  // @include breakpoint-ssm {
+  //   &_ssm-12 {
+  //     @include make-col(12);
+  //   }
+  // }
+
+
 
   &_left {
     display: flex;
@@ -12,38 +43,5 @@
 
   &_mt-30 {
     margin-top: 30px;
-  }
-  
-  &_xxl-6 {
-    @include make-col(6);
-  }
-
-  &_xxl-8 {
-    @include make-col(8);
-  }
-
-  @include breakpoint-lg {
-    &_lg-6 {
-      @include make-col(6);
-    }
-  }
-
-  @include breakpoint-md {
-    &_md-10 {
-      justify-content: center;
-      @include make-col(10);
-    }
-  }
-
-  @include breakpoint-sm {
-    &_sm-10 {
-      @include make-col(10);
-    }
-  }
-
-  @include breakpoint-ssm {
-    &_ssm-12 {
-      @include make-col(12);
-    }
   }
 }
