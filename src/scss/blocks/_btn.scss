@@ -5,9 +5,11 @@
     @include fonts (normal, normal, 13px, 20px, 0.8px, map-get($colors, light));
     text-align: center;
     transition: all .5s;
+    
     &_blue {
         background: map-get($colors, second-color);
     }
+
     &_bgnone {
         margin-left: 16px;
         padding: 7.5px 30px 9.5px 30px;

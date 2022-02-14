@@ -16,7 +16,6 @@
   
   &_xxl-6 {
     @include make-col(6);
-    
   }
 
   &_xxl-8 {
@@ -34,7 +33,6 @@
       justify-content: center;
       @include make-col(10);
     }
-
   }
 
   @include breakpoint-sm {

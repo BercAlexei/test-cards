@@ -4,6 +4,7 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
+    
     &_blue {
         color: map-get($colors, main-color);
         text-align: left;
