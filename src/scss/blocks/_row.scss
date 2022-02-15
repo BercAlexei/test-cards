@@ -5,4 +5,8 @@
     &_centered {
         align-items: center;
     }
+
+    &_left {
+        justify-content: flex-start;
+    }
 }
