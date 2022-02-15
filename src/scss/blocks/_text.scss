@@ -1,0 +1,13 @@
+.text {
+    margin-top: 10px;
+    @include fonts(16px, 26px, 0.8px, map-get($colors, text));
+
+    &_clr-white {
+        color: map-get($colors, light);
+        text-align: center;
+    }
+    @include breakpoint-md {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

@@ -2,28 +2,6 @@
     padding: 30px 30px 40px;
     background: map-get($colors, office);
     height: 100%;
-    &__title {
-        @include fonts(26px, 36px, 1.2px, map-get($colors, text), normal, bold);
-
-        @include breakpoint-lg {
-            font-size: 24px;
-            line-height: 34px;
-        }
-    
-        @include breakpoint-md {
-            font-size: 22px;
-            line-height: 32px;
-        }
-    }
-    &__text {
-        margin-top: 10px;
-        @include fonts(16px, 26px, 0.8px, map-get($colors, text));
-    
-        @include breakpoint-md {
-            font-size: 14px;
-            line-height: 22px;
-        }
-    }
 
     @include breakpoint-sm {
         padding: 16px 16px 30px;
