@@ -1,7 +1,7 @@
 .row {
     @include make-row;
     justify-content: center;
-    
+
     &_centered {
         align-items: center;
     }

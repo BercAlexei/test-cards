@@ -5,7 +5,7 @@
     @include fonts (normal, normal, 13px, 20px, 0.8px, map-get($colors, light));
     text-align: center;
     transition: all .5s;
-    
+
     &_bg-blue {
         background: map-get($colors, secondary);
     }
@@ -15,7 +15,7 @@
         padding: 7.5px 30px 9.5px 30px;
         background: inherit;
         border: 2px solid map-get($colors, primary);
-        
+
         @include breakpoint-ssm {
             margin: 0;
             margin-top: 16px;
@@ -36,8 +36,8 @@
         font-size: 12px;
         line-height: 18px;
     }
-    
+
     @include breakpoint-ssm {
         width: 100%;
     }
-} 
+}

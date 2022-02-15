@@ -14,35 +14,27 @@
     &_xxl-#{$i} {
       @include make-col($i);
     }
-  }
 
-  @include breakpoint-lg {
-    @for $i from 1 through 12 {
+    @include breakpoint-lg {
       &_lg-#{$i} {
         @include make-col($i);
       }
     }
-  }
 
-  @include breakpoint-md {
-    @for $i from 1 through 12 {
+    @include breakpoint-md {
       &_md-#{$i} {
         justify-content: center;
         @include make-col($i);
       }
     }
-  }
 
-  @include breakpoint-sm {
-    @for $i from 1 through 12 {
+    @include breakpoint-sm {
       &_sm-#{$i} {
         @include make-col($i);
       }
     }
-  }
 
-  @include breakpoint-ssm {
-    @for $i from 1 through 12 {
+    @include breakpoint-ssm {
       &_ssm-#{$i} {
         @include make-col($i);
       }

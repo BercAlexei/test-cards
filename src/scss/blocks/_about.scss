@@ -22,15 +22,15 @@
 
     &__buttons {
         margin-top: 30px;
-        
+
         @include breakpoint-md {
             text-align: center;
         }
     }
-    
+
     &__img {
         display: block;
-	    max-width: 100%;
+        max-width: 100%;
 
         @include breakpoint-md {
             text-align: center;
@@ -51,7 +51,7 @@
     }
 
     @include breakpoint-sm {
-        padding: 60px 0 ;
+        padding: 60px 0;
     }
 
     @include breakpoint-ssm {

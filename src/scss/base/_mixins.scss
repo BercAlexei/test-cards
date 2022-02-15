@@ -7,6 +7,12 @@
     color: $color;
 }
 
+@mixin images($width, $height, $fit, $position) {
+  width: $width;
+  height: $height;
+  object-fit: $fit;
+  object-position: $position;
+}
 
 @mixin make-row() { // строка
     display: flex;

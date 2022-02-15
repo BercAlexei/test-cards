@@ -4,10 +4,16 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    
-    &_c-blue {
+
+    &_clr-blue {
         color: map-get($colors, primary);
         text-align: left;
+    }
+
+    &_centered {
+        @include breakpoint-md {
+            text-align: center;
+        }
     }
 
     @include breakpoint-lg {
@@ -18,8 +24,5 @@
     @include breakpoint-md {
         font-size: 46px;
         line-height: 48px;
-        &_ai-center {
-            text-align: center;
-        }
     }
 }
