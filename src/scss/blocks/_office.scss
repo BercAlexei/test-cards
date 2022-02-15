@@ -1,9 +1,0 @@
-.office {
-    padding: 30px 30px 40px;
-    background: map-get($colors, office);
-    height: 100%;
-
-    @include breakpoint-sm {
-        padding: 16px 16px 30px;
-    }
-}
