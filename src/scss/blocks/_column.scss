@@ -10,30 +10,50 @@
     margin-top: 30px;
   }
 
+  &_centered {
+    display: flex;
+    justify-content: center;
+  }
+
   @for $i from 1 through 12 {
     &_xxl-#{$i} {
       @include make-col($i);
     }
+  }
 
+  @for $i from 1 through 12 {
     &_lg-#{$i} {
       @include breakpoint-lg {
         @include make-col($i);
       }
     }
+  }
 
+  @for $i from 1 through 12 {
     &_md-#{$i} {
       @include breakpoint-md {
         justify-content: center;
         @include make-col($i);
       }
     }
+  }
 
+  &_md-col-5 {
+    @include breakpoint-md {
+      justify-content: center;
+      @include make-col(2.4);
+    }
+  }
+
+  @for $i from 1 through 12 {
     &_sm-#{$i} {
       @include breakpoint-sm {
         @include make-col($i);
       }
     }
+  }
 
+  @for $i from 1 through 12 {
     &_ssm-#{$i} {
       @include breakpoint-ssm {
         @include make-col($i);

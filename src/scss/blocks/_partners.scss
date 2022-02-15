@@ -1,0 +1,38 @@
+.partners {
+    padding: 50px 0 105px;
+    background: map-get($colors, bg-partners);
+
+    &__image {
+        display: block;
+        max-width: 100%;
+        margin-top: 50px;
+
+        @include breakpoint-md {
+            margin-top: 40px;
+        }
+
+        @include breakpoint-sm {
+            margin-top: 30px;
+        }
+
+        @include breakpoint-ssm {
+            max-width: 77px;
+        }
+    }
+
+    @include breakpoint-lg {
+        padding: 30px 0 80px;
+    }
+
+    @include breakpoint-md {
+        padding: 30px 0 70px;
+    }
+
+    @include breakpoint-sm {
+        padding: 30px 0 60px;
+    }
+
+    @include breakpoint-ssm {
+        padding: 20px 0 50px;
+    }
+}
