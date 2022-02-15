@@ -2,7 +2,7 @@
     background: map-get($colors, primary);
     border: none;
     padding: 9px 35px 11px 35px;
-    @include fonts (normal, normal, 13px, 20px, 0.8px, map-get($colors, light));
+    @include fonts (13px, 20px, 0.8px, map-get($colors, light));
     text-align: center;
     transition: all .5s;
 

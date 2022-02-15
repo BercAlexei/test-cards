@@ -4,7 +4,7 @@
 
     &__text {
         margin-top: 20px;
-        @include fonts(normal, normal, 20px, 28px, 1.2px, map-get($colors, light));
+        @include fonts(20px, 28px, 1.2px, map-get($colors, light));
 
         @include breakpoint-lg {
             margin-top: 20px;

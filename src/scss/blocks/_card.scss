@@ -10,7 +10,7 @@
     overflow: hidden;
 
     &__category {
-        @include fonts(normal, normal, 13px, 22px, 1.2px, map-get($colors, light));
+        @include fonts(13px, 22px, 1.2px, map-get($colors, light));
         text-align: center;
         text-transform: uppercase;
         position: absolute;
@@ -64,7 +64,7 @@
         margin-top: 20px;
 
         a {
-            @include fonts(normal, normal, 13px, 20px, 0.8px, map-get($colors, primary));
+            @include fonts(13px, 20px, 0.8px, map-get($colors, primary));
             text-decoration: none;
         }
 
@@ -90,7 +90,7 @@
 
     &__title {
         margin-top: 6px;
-        @include fonts(normal, normal, 22px, 30px, 1.2px, map-get($colors, dark));
+        @include fonts(22px, 30px, 1.2px, map-get($colors, dark));
 
         @include breakpoint-lg {
             font-size: 20px;
@@ -110,7 +110,7 @@
 
     &__text {
         margin-top: 16px;
-        @include fonts(normal, normal, 16px, 26px, 0.8px, map-get($colors, dark));
+        @include fonts(16px, 26px, 0.8px, map-get($colors, dark));
 
         @include breakpoint-md {
             font-size: 14px;

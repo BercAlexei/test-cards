@@ -1,4 +1,4 @@
-@mixin fonts($style, $weigh, $size, $height, $spacing, $color) {
+@mixin fonts( $size, $height, $spacing, $color, $style:normal, $weigh:normal) {
     font-style: $style;
     font-weight: $weigh;
     font-size: $size;
