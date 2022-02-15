@@ -57,7 +57,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        @include images(100%, 100%, cover, center);
+        @include images;
     }
 
     &__author {

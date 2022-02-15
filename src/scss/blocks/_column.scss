@@ -15,27 +15,27 @@
       @include make-col($i);
     }
 
-    @include breakpoint-lg {
-      &_lg-#{$i} {
+    &_lg-#{$i} {
+      @include breakpoint-lg {
         @include make-col($i);
       }
     }
 
-    @include breakpoint-md {
-      &_md-#{$i} {
+    &_md-#{$i} {
+      @include breakpoint-md {
         justify-content: center;
         @include make-col($i);
       }
     }
 
-    @include breakpoint-sm {
-      &_sm-#{$i} {
+    &_sm-#{$i} {
+      @include breakpoint-sm {
         @include make-col($i);
       }
     }
 
-    @include breakpoint-ssm {
-      &_ssm-#{$i} {
+    &_ssm-#{$i} {
+      @include breakpoint-ssm {
         @include make-col($i);
       }
     }

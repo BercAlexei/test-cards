@@ -10,7 +10,7 @@
     left: 0;
 
     &-img {
-      @include images(100%, 100%, cover, center);
+      @include images;
     }
   }
 
