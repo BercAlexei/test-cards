@@ -110,9 +110,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ humburger; }
 /* harmony export */ });
 function humburger() {
-  const humburger = document.querySelector('.header__humburger');
+  const humburger = document.querySelector('.header__humburger'),
+        menu = document.querySelector('.overlay');
   humburger.addEventListener('click', () => {
     humburger.classList.toggle('header__humburger_active');
+    menu.classList.toggle('overlay_active');
   });
 }
 
@@ -160,10 +162,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function theme() {
   const logo = document.querySelector('.header__logo-link'),
-        headerWrapper = document.querySelector('.header_dark');
+        headerWrapper = document.querySelector('.header_dark'),
+        actions = document.querySelectorAll('.call');
   logo.addEventListener('click', event => {
     event.preventDefault();
     headerWrapper.classList.toggle('header_light-blue');
+    actions.forEach(item => {
+      console.log(item);
+      item.classList.toggle('call_light');
+    });
   });
 }
 

@@ -1,0 +1,11 @@
+.overlay {
+    position: fixed;
+    z-index: 50;
+    height: 0;
+    width: 100%;
+    background: rgba(map-get($colors, black), 0.5);
+    transition: all 0.5s;
+    &_active {
+        height: 100%;
+    }
+}

@@ -79,32 +79,6 @@
         }
     }
 
-    &__buttons {
-        &-tel {
-            @include fonts (13px, 20px, 0.8px, map-get($colors, primary));
-            text-decoration: none;
-            margin-right: 26px;
-
-            &:hover {
-                color: map-get($colors, primary);
-            }
-
-            #{$root}_light-blue & {
-                color: map-get($colors, dark);
-            }
-        }
-
-        button {
-            #{$root}_light-blue & {
-                background: map-get($colors, secondary);
-            }
-        }
-
-        @include breakpoint-md {
-            display: none;
-        }
-    }
-
     &__humburger {
         display: none;
         width: 27px;

@@ -15,10 +15,10 @@
                 <div class="header__logo">
                     <a href="#" class="header__logo-link"></a>
                 </div>
-                
-                <div class="header__buttons">
-                    <a class="header__buttons-tel" href="tel:+79089035555">+7 (908) 903-55-55</a>
-                    <button class="button">
+
+                <div class="call call_md-d-none">
+                    <a class="call__tel" href="tel:+79089035555">+7 (908) 903-55-55</a>
+                    <button class="button call__button">
                         Call to action
                     </button>
                 </div>
@@ -35,8 +35,8 @@
             <div class="header__wrapper">
                 <nav class="navigation">
                     <ul class="navigation__menu">
-                        <li class="navigation__item"><a class="navigation__item-link" href="#">Contacts</a></li>
                         <li class="navigation__item"><a class="navigation__item-link" href="#">About</a></li>
+                        <li class="navigation__item"><a class="navigation__item-link" href="#">Contacts</a></li>
                         <li class="navigation__item"><a class="navigation__item-link" href="#">Blog</a></li>
                     </ul>
                 </nav>
@@ -44,10 +44,27 @@
         </div>
     </header>
 
-    <div class="menu">
-        
-    </div>
+    <div class="overlay">
+        <div class="menu">
+            <nav class="navigation">
+                <ul class="navigation__menu navigation__menu_vertical">
+                    <li class="navigation__item navigation__item_centered"><a class="navigation__item-link"
+                            href="#">About</a></li>
+                    <li class="navigation__item navigation__item_centered"><a class="navigation__item-link"
+                            href="#">Contacts</a></li>
+                    <li class="navigation__item navigation__item_centered"><a class="navigation__item-link"
+                            href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="call call_vertical">
+                <a class="call__tel call__tel_order-2" href="tel:+79089035555">+7 (908) 903-55-55</a>
+                <button class="button call__button">
+                    Call to action
+                </button>
+            </div>
+        </div>
 
+    </div>
 
     <section class="hero">
         <div class="hero__bg">

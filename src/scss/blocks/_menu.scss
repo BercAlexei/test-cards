@@ -1,0 +1,8 @@
+.menu {
+    position: fixed;
+    z-index: 50;
+    background: map-get($colors, light);
+    height: 100%;
+    right: 0;
+    padding: 50px 90px 150px;
+}

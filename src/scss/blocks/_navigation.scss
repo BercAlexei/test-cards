@@ -5,18 +5,26 @@
         margin: 0;
         padding: 0;
         list-style: none;
+        &_vertical {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__item {
         margin-right: 51px;
-
+        &_centered {
+            text-align: center;
+            margin: 0;
+        }
         &-link {
             position: relative;
             @include fonts(13px, 22px, 1.2px, map-get($colors, dark));
             text-align: center;
             text-transform: uppercase;
             text-decoration: none;
-
+            
             &:after {
                 content: '';
                 display: block;
