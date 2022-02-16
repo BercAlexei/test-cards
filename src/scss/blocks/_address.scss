@@ -7,7 +7,7 @@
 
     &__item {
         padding: 30px 30px 40px;
-        background: map-get($colors, office);
+        background: map-get($colors, bg-address-card);
         height: 100%;
 
         @include breakpoint-sm {
@@ -19,13 +19,13 @@
             padding: 0;
         }
 
+        &_clr-white {
+            color: map-get($colors, light);
+            text-align: center;
+        }
+
         &-title {
             @include fonts(26px, 36px, 1.2px, map-get($colors, text), normal, bold);
-
-            &_clr-white {
-                text-align: center;
-                color: map-get($colors, light);
-            }
 
             @include breakpoint-lg {
                 font-size: 24px;
@@ -41,11 +41,6 @@
         &-text {
             margin-top: 10px;
             @include fonts(16px, 26px, 0.8px, map-get($colors, text));
-
-            &_clr-white {
-                color: map-get($colors, light);
-                text-align: center;
-            }
 
             @include breakpoint-md {
                 font-size: 14px;
