@@ -10,7 +10,7 @@
 
 <body>
     <header class="header">
-        <div class="header header_dark">
+        <div class="header__top">
             <div class="header__wrapper">
                 <div class="header__logo">
                     <a href="#" class="header__logo-link"></a>
@@ -31,11 +31,11 @@
             </div>
         </div>
 
-        <div class="header header_white">
+        <div class="header_bottom">
             <div class="header__wrapper">
                 <nav class="navigation">
                     <ul class="navigation__menu">
-                        <li class="navigation__item"><a class="navigation__item-link" href="#">About</a></li>
+                        <li class="navigation__item"><a class="navigation__item-link navigation__item-link_active" href="#">About</a></li>
                         <li class="navigation__item"><a class="navigation__item-link" href="#">Contacts</a></li>
                         <li class="navigation__item"><a class="navigation__item-link" href="#">Blog</a></li>
                     </ul>
@@ -44,11 +44,11 @@
         </div>
     </header>
 
-    <div class="overlay">
-        <div class="menu">
+    <div class="menu">
+        <div class="menu__content">
             <nav class="navigation">
                 <ul class="navigation__menu navigation__menu_vertical">
-                    <li class="navigation__item navigation__item_centered"><a class="navigation__item-link"
+                    <li class="navigation__item navigation__item_centered"><a class="navigation__item-link navigation__item-link_active"
                             href="#">About</a></li>
                     <li class="navigation__item navigation__item_centered"><a class="navigation__item-link"
                             href="#">Contacts</a></li>
@@ -63,7 +63,7 @@
                 </button>
             </div>
         </div>
-
+        <div class="menu__overlay"></div>
     </div>
 
     <section class="hero">

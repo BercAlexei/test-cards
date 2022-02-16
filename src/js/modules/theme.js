@@ -1,6 +1,6 @@
 export default function theme() {
     const logo = document.querySelector('.header__logo-link'),
-          headerWrapper = document.querySelector('.header_dark'),
+          headerWrapper = document.querySelector('.header__top'),
           actions = document.querySelectorAll('.call');
 
     logo.addEventListener('click', (event) => {

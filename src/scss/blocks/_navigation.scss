@@ -14,10 +14,19 @@
 
     &__item {
         margin-right: 51px;
+
         &_centered {
             text-align: center;
             margin: 0;
+            margin-bottom: 18px;
+
+            a {
+                &:after {
+                    bottom: -10px;
+                }
+            }
         }
+
         &-link {
             position: relative;
             @include fonts(13px, 22px, 1.2px, map-get($colors, dark));
@@ -39,6 +48,12 @@
             &:hover {
                 color: map-get($colors, dark);
 
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &_active {
                 &:after {
                     width: 100%;
                 }
