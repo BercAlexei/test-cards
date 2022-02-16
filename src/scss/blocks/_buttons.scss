@@ -4,7 +4,7 @@
     padding: 9px 35px 11px 35px;
     @include fonts (13px, 20px, 0.8px, map-get($colors, light));
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
 
     &_bg-blue {
         background: map-get($colors, secondary);

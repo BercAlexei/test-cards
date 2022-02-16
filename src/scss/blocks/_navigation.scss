@@ -1,0 +1,44 @@
+.navigation {
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        margin-right: 51px;
+
+        &-link {
+            position: relative;
+            @include fonts(13px, 22px, 1.2px, map-get($colors, dark));
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 4px;
+                width: 0;
+                position: absolute;
+                bottom: -17px;
+                background: map-get($colors, primary);
+                transition: all 0.5s;
+            }
+
+            &:hover {
+                color: map-get($colors, dark);
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

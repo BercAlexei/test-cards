@@ -1,0 +1,112 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 0px 8px rgba(1, 1, 1, 0.2);
+
+    &_dark {
+        background: map-get($colors, dark);
+    }
+
+    &_white {
+        background: map-get($colors, light);
+
+        @include breakpoint-md {
+            display: none;
+        }
+    }
+
+    &__logo {
+        @include images-block(block, 110px);
+
+        @include breakpoint-lg {
+            max-width: 102px;
+        }
+
+        @include breakpoint-md {
+            max-width: 84px;
+        }
+
+        @include breakpoint-sm {
+            max-width: 76px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: map-get($container-width, xl);
+        margin: 0 auto;
+        padding: 15px 0;
+
+        &_left {
+            padding: 13px 0 15px;
+            background: map-get($colors, light);
+        }
+
+        @include breakpoint-lg {
+            max-width: 100%;
+            padding: 13px 26px 15px
+        }
+    }
+
+    &__buttons {
+        &-tel {
+            @include fonts (13px, 20px, 0.8px, map-get($colors, primary));
+            text-decoration: none;
+            margin-right: 26px;
+
+            &:hover {
+                color: map-get($colors, primary);
+            }
+        }
+
+        @include breakpoint-md {
+            display: none;
+        }
+    }
+
+    &__humburger {
+        display: none;
+        width: 27px;
+        cursor: pointer;
+
+        @include breakpoint-md {
+            display: block;
+        }
+
+        span {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: map-get($colors, primary);
+            margin-bottom: 5px;
+            transition: 0.5s all;
+            &:last-child {
+                margin: 0
+            };
+        }
+
+        &_active {
+            span {
+                margin-bottom: -2px;
+
+                &:first-child {
+                    transform: translateY(3px) rotate(-45deg);
+                }
+
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+
+                &:last-child {
+                    transform: translateY(3px) rotate(45deg);
+                }
+            }
+        }
+    }
+}
