@@ -148,6 +148,27 @@ async function showCards() {
 
 /***/ }),
 
+/***/ "./src/js/modules/theme.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/theme.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ theme; }
+/* harmony export */ });
+function theme() {
+  const logo = document.querySelector('.header__logo-link'),
+        headerWrapper = document.querySelector('.header_dark');
+  logo.addEventListener('click', event => {
+    event.preventDefault();
+    headerWrapper.classList.toggle('header_light-blue');
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/services/getResourse.js":
 /*!****************************************!*\
   !*** ./src/js/services/getResourse.js ***!
@@ -233,6 +254,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_showCards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/showCards.js */ "./src/js/modules/showCards.js");
 /* harmony import */ var _modules_clickCard_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/clickCard.js */ "./src/js/modules/clickCard.js");
 /* harmony import */ var _modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/humburger.js */ "./src/js/modules/humburger.js");
+/* harmony import */ var _modules_theme_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/theme.js */ "./src/js/modules/theme.js");
+
 
 
 
@@ -242,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_showCards_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_clickCard_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_theme_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
 }();
 /******/ })()

@@ -8,6 +8,10 @@
         background: map-get($colors, dark);
     }
 
+    &_light-blue {
+        background: map-get($colors, light-blue);
+    }
+
     &_white {
         background: map-get($colors, light);
 
@@ -16,8 +20,11 @@
         }
     }
 
-    &__logo {
-        @include images-block(block, 110px);
+    &__logo-link {
+        max-height: 100%;
+        max-width: 110px;
+        mask: center / center no-repeat;
+        mask-image: url('img/logo.svg');
 
         @include breakpoint-lg {
             max-width: 102px;
@@ -59,6 +66,10 @@
 
             &:hover {
                 color: map-get($colors, primary);
+            }
+
+            &_dark {
+                color: map-get($colors, dark);
             }
         }
 
