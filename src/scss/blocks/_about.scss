@@ -29,8 +29,7 @@
     }
 
     &__img {
-        display: block;
-        max-width: 100%;
+        @include images-block();
 
         @include breakpoint-md {
             text-align: center;

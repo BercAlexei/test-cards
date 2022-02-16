@@ -1,13 +1,9 @@
 .address {
     padding: 50px 0 100px;
 
-    &_blue {
-        background: map-get($colors, secondary);
-    }
-
     &__item {
         padding: 30px 30px 40px;
-        background: map-get($colors, bg-address-card);
+        background: map-get($colors, light-green);
         height: 100%;
 
         @include breakpoint-sm {
@@ -47,6 +43,10 @@
                 line-height: 22px;
             }
         }
+    }
+
+    &_blue {
+        background: map-get($colors, secondary);
     }
 
     @include breakpoint-lg {

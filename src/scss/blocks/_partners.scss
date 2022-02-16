@@ -1,10 +1,9 @@
 .partners {
     padding: 50px 0 105px;
-    background: map-get($colors, bg-partners);
+    background: map-get($colors, beige);
 
     &__image {
-        display: block;
-        max-width: 100%;
+        @include images-block;
         margin-top: 50px;
 
         @include breakpoint-md {

@@ -1,4 +1,4 @@
-@mixin fonts( $size, $height, $spacing, $color, $style:normal, $weigh:normal) {
+@mixin fonts( $size, $height, $spacing, $color, $style: normal, $weigh: normal) {
     font-style: $style;
     font-weight: $weigh;
     font-size: $size;
@@ -7,11 +7,16 @@
     color: $color;
 }
 
-@mixin images($width:100%, $height:100%, $fit:cover, $position:center) {
+@mixin images($width: 100%, $height: 100%, $fit: cover, $position: center) {
   width: $width;
   height: $height;
   object-fit: $fit;
   object-position: $position;
+}
+
+@mixin images-block($display: block, $maxWidth:100%) {
+  display: block;
+  max-width: 100%;
 }
 
 @mixin make-row() { // строка
