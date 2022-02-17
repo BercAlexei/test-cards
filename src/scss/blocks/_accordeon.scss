@@ -1,0 +1,68 @@
+.accordeon {
+    padding: 100px 0;
+
+    &__item {
+        padding: 18px 20px 18px 20px;
+        border-right: none;
+        border-left: none;
+        $root: &;
+
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        &-title {
+            @include fonts(13px, 22px, 1.2px, map-get($colors, dark));
+            text-transform: uppercase;
+        }
+
+        &-image {
+            @include images-block;
+            transform: rotate(180deg);
+            transition: all 0.5s;
+
+            #{$root}_active & {
+                transform: rotate(0deg);
+            }
+        }
+
+        &-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            padding: 0;
+            @include fonts(16px, 26px, 0.8px, map-get($colors, dark));
+            transition: all 0.5s, max-height 0.5s;
+            
+            #{$root}_active & {
+                max-height: 1000px;
+                opacity: 1;
+                padding-top: 20px;
+            }
+
+            @include breakpoint-md {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    @include breakpoint-lg {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-md {
+        padding: 70px 0;
+    }
+
+    @include breakpoint-sm {
+        padding: 60px 0;
+    }
+
+    @include breakpoint-ssm {
+        padding: 50px 0;
+    }
+}

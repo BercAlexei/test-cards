@@ -2,6 +2,41 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/accorderon.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/accorderon.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ accrdeon; }
+/* harmony export */ });
+function accrdeon() {
+  const accordeonItem = document.querySelectorAll('.accordeon__item'),
+        accardeonHead = document.querySelectorAll('.accordeon__item-head');
+  accordeonItem.forEach(item => {
+    item.classList.remove('accordeon__item_active');
+  });
+  accardeonHead.forEach(item => {
+    item.addEventListener('click', function () {
+      if (!this.parentNode.classList.contains('accordeon__item_active')) {
+        accordeonItem.forEach(item => {
+          item.classList.remove('accordeon__item_active');
+          item.childNodes[1].style.maxHeight = '0px';
+        });
+        this.parentNode.classList.add('accordeon__item_active');
+        this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
+      } else {
+        this.parentNode.classList.remove('accordeon__item_active');
+        this.nextElementSibling.style.maxHeight = '0px';
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/modules/cardRender.js":
 /*!**************************************!*\
   !*** ./src/js/modules/cardRender.js ***!
@@ -300,6 +335,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/humburger.js */ "./src/js/modules/humburger.js");
 /* harmony import */ var _modules_theme_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/theme.js */ "./src/js/modules/theme.js");
 /* harmony import */ var _modules_navActive_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navActive.js */ "./src/js/modules/navActive.js");
+/* harmony import */ var _modules_accorderon_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accorderon.js */ "./src/js/modules/accorderon.js");
+
 
 
 
@@ -313,6 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_theme_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
   (0,_modules_navActive_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_modules_accorderon_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 }();
 /******/ })()
