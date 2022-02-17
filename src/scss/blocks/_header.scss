@@ -76,9 +76,20 @@
     }
 
     &__humburger {
+        position: relative;
         display: none;
         width: 27px;
         cursor: pointer;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 30px;
+        }
 
         @include breakpoint-md {
             display: block;

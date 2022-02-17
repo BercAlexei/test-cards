@@ -107,17 +107,33 @@ class Card {
 
 /***/ }),
 
-/***/ "./src/js/modules/clickCard.js":
-/*!*************************************!*\
-  !*** ./src/js/modules/clickCard.js ***!
-  \*************************************/
+/***/ "./src/js/modules/cards.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/cards.js ***!
+  \*********************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ clickCard; }
+/* harmony export */   "default": function() { return /* binding */ cards; }
 /* harmony export */ });
-function clickCard() {
+/* harmony import */ var _services_getResourse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/getResourse.js */ "./src/js/services/getResourse.js");
+/* harmony import */ var _cardRender_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cardRender.js */ "./src/js/modules/cardRender.js");
+
+
+async function cards() {
+  let arrayCards = await (0,_services_getResourse_js__WEBPACK_IMPORTED_MODULE_0__.getResource)('db.json').then(res => res.cards);
+  arrayCards.forEach(({
+    cat,
+    color,
+    img,
+    author,
+    title,
+    descr
+  }, id) => {
+    new _cardRender_js__WEBPACK_IMPORTED_MODULE_1__["default"](id + 1, cat, color, img, author, title, descr).render();
+  }); //клик по кариочкам
+
   let cards = document.querySelector('.cards__wrapper');
   cards.addEventListener('click', event => {
     if (event.target.getAttribute('data-id') || event.target.tagName == 'A') {
@@ -134,17 +150,18 @@ function clickCard() {
 
 /***/ }),
 
-/***/ "./src/js/modules/humburger.js":
-/*!*************************************!*\
-  !*** ./src/js/modules/humburger.js ***!
-  \*************************************/
+/***/ "./src/js/modules/header.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/header.js ***!
+  \**********************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ humburger; }
+/* harmony export */   "default": function() { return /* binding */ header; }
 /* harmony export */ });
-function humburger() {
+function header() {
+  //humburger
   const humburger = document.querySelector('.header__humburger'),
         menu = document.querySelector('.menu'),
         overlay = document.querySelector('.menu__overlay');
@@ -157,91 +174,36 @@ function humburger() {
       menu.classList.toggle('menu_active');
       humburger.classList.remove('header__humburger_active');
     }
-  });
-}
+  }); //navigation
 
-/***/ }),
-
-/***/ "./src/js/modules/navActive.js":
-/*!*************************************!*\
-  !*** ./src/js/modules/navActive.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ navActive; }
-/* harmony export */ });
-function navActive() {
   const navMenu = document.querySelectorAll('.navigation'),
         navLink = document.querySelectorAll('.navigation__item-link');
-  navLink.forEach(item => {
-    item.classList.remove('navigation__item-link_active');
-  });
+
+  function removeClass(element) {
+    element.forEach(item => {
+      item.classList.remove('navigation__item-link_active');
+    });
+  }
+
+  removeClass(navLink);
   navMenu.forEach(menu => {
     menu.addEventListener('click', event => {
       if (event.target.tagName === 'A') {
         event.preventDefault();
-        navLink.forEach(item => {
-          item.classList.remove('navigation__item-link_active');
-        });
+        removeClass(navLink);
         event.target.classList.add('navigation__item-link_active');
       }
     });
-  });
-}
+  }); //theme
 
-/***/ }),
-
-/***/ "./src/js/modules/showCards.js":
-/*!*************************************!*\
-  !*** ./src/js/modules/showCards.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ showCards; }
-/* harmony export */ });
-/* harmony import */ var _services_getResourse_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/getResourse.js */ "./src/js/services/getResourse.js");
-/* harmony import */ var _cardRender_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cardRender.js */ "./src/js/modules/cardRender.js");
-
-
-async function showCards() {
-  let arrayCards = await (0,_services_getResourse_js__WEBPACK_IMPORTED_MODULE_0__.getResource)('db.json').then(res => res.cards);
-  arrayCards.forEach(({
-    cat,
-    color,
-    img,
-    author,
-    title,
-    descr
-  }, id) => {
-    new _cardRender_js__WEBPACK_IMPORTED_MODULE_1__["default"](id + 1, cat, color, img, author, title, descr).render();
-  });
-}
-
-/***/ }),
-
-/***/ "./src/js/modules/theme.js":
-/*!*********************************!*\
-  !*** ./src/js/modules/theme.js ***!
-  \*********************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ theme; }
-/* harmony export */ });
-function theme() {
   const logo = document.querySelector('.header__logo-link'),
         headerRow = document.querySelector('.header'),
-        calls = document.querySelectorAll('.call');
+        ctas = document.querySelectorAll('.ctas');
   logo.addEventListener('click', event => {
     event.preventDefault();
     headerRow.classList.toggle('header_bg-light-blue');
-    calls.forEach(item => {
-      item.classList.toggle('call_light');
+    ctas.forEach(item => {
+      item.classList.toggle('ctas_light');
     });
   });
 }
@@ -330,27 +292,18 @@ var __webpack_exports__ = {};
   !*** ./src/js/_script.js ***!
   \***************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_showCards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/showCards.js */ "./src/js/modules/showCards.js");
-/* harmony import */ var _modules_clickCard_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/clickCard.js */ "./src/js/modules/clickCard.js");
-/* harmony import */ var _modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/humburger.js */ "./src/js/modules/humburger.js");
-/* harmony import */ var _modules_theme_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/theme.js */ "./src/js/modules/theme.js");
-/* harmony import */ var _modules_navActive_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navActive.js */ "./src/js/modules/navActive.js");
-/* harmony import */ var _modules_accorderon_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accorderon.js */ "./src/js/modules/accorderon.js");
-
-
-
+/* harmony import */ var _modules_cards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cards.js */ "./src/js/modules/cards.js");
+/* harmony import */ var _modules_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header.js */ "./src/js/modules/header.js");
+/* harmony import */ var _modules_accorderon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accorderon.js */ "./src/js/modules/accorderon.js");
 
 
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  (0,_modules_showCards_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_modules_clickCard_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_modules_theme_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_modules_navActive_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_modules_accorderon_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_cards_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_modules_header_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_modules_accorderon_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 }();
 /******/ })()

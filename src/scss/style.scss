@@ -10,6 +10,13 @@
 
 .container {
     @include make-container;
+
+    &_d-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
 }
 
 @import 'blocks/row';
@@ -25,5 +32,5 @@
 @import 'blocks/header';
 @import 'blocks/navigation';
 @import 'blocks/menu';
-@import 'blocks/call';
+@import 'blocks/ctas';
 @import 'blocks/accordeon'
