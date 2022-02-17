@@ -17,6 +17,13 @@ export default function header() {
         }
     })
 
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) {
+            menu.classList.remove('menu_active')
+            humburger.classList.remove('header__humburger_active')
+        } 
+    });
+
     //navigation
     const navMenu = document.querySelectorAll('.navigation'),
         navLink = document.querySelectorAll('.navigation__item-link');

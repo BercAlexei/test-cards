@@ -6,15 +6,6 @@
     justify-content: flex-end;
   }
 
-  &_border {
-    border-top: 1px solid map-get($colors, gray);
-    padding: 0;
-
-    &:last-child {
-      border-bottom: 1px solid map-get($colors, gray);
-    }
-  }
-
   &_mt-30 {
     margin-top: 30px;
   }

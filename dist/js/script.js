@@ -2,33 +2,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/modules/accorderon.js":
+/***/ "./src/js/modules/accordiron.js":
 /*!**************************************!*\
-  !*** ./src/js/modules/accorderon.js ***!
+  !*** ./src/js/modules/accordiron.js ***!
   \**************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ accordeon; }
+/* harmony export */   "default": function() { return /* binding */ accordion; }
 /* harmony export */ });
-function accordeon() {
-  const accordeonItem = document.querySelectorAll('.accordeon__item'),
-        accardeonHead = document.querySelectorAll('.accordeon__item-head');
+function accordion() {
+  const accordeonItem = document.querySelectorAll('.accordion__item'),
+        accardeonHead = document.querySelectorAll('.accordion__item-head');
   accordeonItem.forEach(item => {
     item.classList.remove('accordeon__item_active');
   });
   accardeonHead.forEach(item => {
     item.addEventListener('click', function () {
-      if (!this.parentNode.classList.contains('accordeon__item_active')) {
+      if (!this.parentNode.classList.contains('accordion__item_active')) {
         accordeonItem.forEach(item => {
-          item.classList.remove('accordeon__item_active');
+          item.classList.remove('accordion__item_active');
           item.childNodes[1].style.maxHeight = '0px';
         });
-        this.parentNode.classList.add('accordeon__item_active');
+        this.parentNode.classList.add('accordion__item_active');
         this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
       } else {
-        this.parentNode.classList.remove('accordeon__item_active');
+        this.parentNode.classList.remove('accordion__item_active');
         this.nextElementSibling.style.maxHeight = '0px';
       }
     });
@@ -174,6 +174,12 @@ function header() {
       menu.classList.toggle('menu_active');
       humburger.classList.remove('header__humburger_active');
     }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) {
+      menu.classList.remove('menu_active');
+      humburger.classList.remove('header__humburger_active');
+    }
   }); //navigation
 
   const navMenu = document.querySelectorAll('.navigation'),
@@ -294,7 +300,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cards.js */ "./src/js/modules/cards.js");
 /* harmony import */ var _modules_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header.js */ "./src/js/modules/header.js");
-/* harmony import */ var _modules_accorderon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accorderon.js */ "./src/js/modules/accorderon.js");
+/* harmony import */ var _modules_accordiron_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordiron.js */ "./src/js/modules/accordiron.js");
 
 
 
@@ -303,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_cards_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_header_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_accorderon_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_accordiron_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 }();
 /******/ })()
