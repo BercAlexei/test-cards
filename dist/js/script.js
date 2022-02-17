@@ -10,9 +10,9 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ accrdeon; }
+/* harmony export */   "default": function() { return /* binding */ accordeon; }
 /* harmony export */ });
-function accrdeon() {
+function accordeon() {
   const accordeonItem = document.querySelectorAll('.accordeon__item'),
         accardeonHead = document.querySelectorAll('.accordeon__item-head');
   accordeonItem.forEach(item => {

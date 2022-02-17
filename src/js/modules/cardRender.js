@@ -6,9 +6,9 @@ export default class Card {
         this.author = author
         this.title = title
         this.descr = descr
-        
+
         this.img = function imgRender() {
-            if(img) {
+            if (img) {
                 return `<img class="card__img" src="${img}" alt="image" loading="lazy">`
             } else {
                 return ''

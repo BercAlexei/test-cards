@@ -32,9 +32,9 @@
     &__button {
         #{$root}_light & {
             background: map-get($colors, secondary)
-        } 
+        }
     }
-    
+
     &_md-d-none {
         @include breakpoint-md {
             display: none;

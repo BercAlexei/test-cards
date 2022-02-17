@@ -18,7 +18,7 @@
 
         &_bottom {
             background: map-get($colors, light);
-    
+
             @include breakpoint-md {
                 display: none;
             }
@@ -40,7 +40,7 @@
             mask: url('../img/logo.svg') center / cover no-repeat;
             background: map-get($colors, light);
             transition: all 0.5s;
-            
+
             &:hover {
                 opacity: 0.7;
             }
@@ -52,11 +52,11 @@
             @include breakpoint-lg {
                 height: 24px;
             }
-    
+
             @include breakpoint-md {
                 height: 20px;
             }
-    
+
             @include breakpoint-sm {
                 height: 18px;
             }
@@ -80,7 +80,7 @@
         display: none;
         width: 27px;
         cursor: pointer;
-        
+
         &::after {
             content: '';
             position: absolute;

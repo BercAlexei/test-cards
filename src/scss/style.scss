@@ -11,7 +11,7 @@
 .container {
     @include make-container;
 
-    &_d-flex{
+    &_d-flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -33,4 +33,4 @@
 @import 'blocks/navigation';
 @import 'blocks/menu';
 @import 'blocks/ctas';
-@import 'blocks/accordeon'
+@import 'blocks/accordeon';
