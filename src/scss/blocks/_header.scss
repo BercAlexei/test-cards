@@ -6,6 +6,7 @@
     $root: &;
 
     &__row {
+        transition: all 0.5s;
 
         &_top {
             background: map-get($colors, dark);
@@ -35,9 +36,15 @@
             display: block;
             height: 26px;
             max-width: 100%;
+            opacity: 1;
             mask: url('../img/logo.svg') center / cover no-repeat;
             background: map-get($colors, light);
+            transition: all 0.5s;
             
+            &:hover {
+                opacity: 0.7;
+            }
+
             #{$root}_bg-light-blue & {
                 background: map-get($colors, dark-gray);
             }
@@ -65,25 +72,6 @@
 
         @include breakpoint-sm {
             width: 76px;
-        }
-    }
-
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: map-get($container-width, xl);
-        margin: 0 auto;
-        padding: 15px 0;
-
-        &_left {
-            padding: 13px 0 15px;
-            background: map-get($colors, light);
-        }
-
-        @include breakpoint-lg {
-            max-width: 100%;
-            padding: 13px 26px 15px
         }
     }
 

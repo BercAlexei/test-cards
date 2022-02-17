@@ -127,17 +127,17 @@ function humburger() {
 
 /***/ }),
 
-/***/ "./src/js/modules/navClick.js":
-/*!************************************!*\
-  !*** ./src/js/modules/navClick.js ***!
-  \************************************/
+/***/ "./src/js/modules/navActive.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/navActive.js ***!
+  \*************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ navClick; }
+/* harmony export */   "default": function() { return /* binding */ navActive; }
 /* harmony export */ });
-function navClick() {
+function navActive() {
   const navMenu = document.querySelectorAll('.navigation'),
         navLink = document.querySelectorAll('.navigation__item-link');
   navLink.forEach(item => {
@@ -299,7 +299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_clickCard_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/clickCard.js */ "./src/js/modules/clickCard.js");
 /* harmony import */ var _modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/humburger.js */ "./src/js/modules/humburger.js");
 /* harmony import */ var _modules_theme_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/theme.js */ "./src/js/modules/theme.js");
-/* harmony import */ var _modules_navClick_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navClick.js */ "./src/js/modules/navClick.js");
+/* harmony import */ var _modules_navActive_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navActive.js */ "./src/js/modules/navActive.js");
 
 
 
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_modules_clickCard_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_humburger_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_theme_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_modules_navClick_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_modules_navActive_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 }();
 /******/ })()
