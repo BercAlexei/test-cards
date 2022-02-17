@@ -10,12 +10,6 @@
         right: -100vw;
         height: 100%;
         z-index: 10;
-        // position: absolute;
-        // right: 0;
-        // top: -100%;        
-        // z-index: 5;
-        // width: 100vw;
-        // height: 100vh;
         background: map-get($colors, light);
         padding: 50px 90px 150px;
         transition: all 0.5s;
@@ -43,7 +37,4 @@
            top: 0;
         }
     }
-    // &_active {
-    //     width: 100vw;
-    // }
 }
