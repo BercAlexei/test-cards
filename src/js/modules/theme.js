@@ -1,13 +1,13 @@
 export default function theme() {
     const logo = document.querySelector('.header__logo-link'),
-          headerWrapper = document.querySelector('.header__top'),
-          actions = document.querySelectorAll('.call');
+          headerRow = document.querySelector('.header'),
+          calls = document.querySelectorAll('.call');
 
     logo.addEventListener('click', (event) => {
         event.preventDefault();
-        headerWrapper.classList.toggle('header_light-blue');
-        actions.forEach(item => {
-            console.log(item)
+        headerRow.classList.toggle('header_bg-light-blue');
+
+        calls.forEach(item => {
             item.classList.toggle('call_light');
         })
     })

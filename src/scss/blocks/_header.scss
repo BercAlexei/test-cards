@@ -5,20 +5,27 @@
     box-shadow: 0px 0px 8px rgba(1, 1, 1, 0.2);
     $root: &;
 
-    &__top {
-        background: map-get($colors, dark);
+    &__row {
+
+        &_top {
+            background: map-get($colors, dark);
+
+            #{$root}_bg-light-blue & {
+                background: map-get($colors, light-blue);
+            }
+        }
+
+        &_bottom {
+            background: map-get($colors, light);
+    
+            @include breakpoint-md {
+                display: none;
+            }
+        }
     }
 
     &_light-blue {
         background: map-get($colors, light-blue);
-    }
-
-    &_bottom {
-        background: map-get($colors, light);
-
-        @include breakpoint-md {
-            display: none;
-        }
     }
 
     &__logo {
@@ -30,7 +37,8 @@
             max-width: 100%;
             mask: url('../img/logo.svg') center / cover no-repeat;
             background: map-get($colors, light);
-            #{$root}_light-blue & {
+            
+            #{$root}_bg-light-blue & {
                 background: map-get($colors, dark-gray);
             }
 
@@ -97,7 +105,7 @@
             margin-bottom: 5px;
             transition: 0.5s all;
 
-            #{$root}_light-blue & {
+            #{$root}_bg-light-blue & {
                 background: map-get($colors, secondary);
             }
 
@@ -108,17 +116,15 @@
 
         &_active {
             span {
-                margin-bottom: -2px;
+                margin-bottom: -3px;
 
                 &:first-child {
                     transform: translateY(3px) rotate(-45deg);
                 }
 
-
                 &:nth-child(2) {
                     display: none;
                 }
-
 
                 &:last-child {
                     transform: translateY(3px) rotate(45deg);

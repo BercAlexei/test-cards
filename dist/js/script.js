@@ -120,6 +120,7 @@ function humburger() {
   document.addEventListener('click', event => {
     if (event.target === overlay) {
       menu.classList.toggle('menu_active');
+      humburger.classList.remove('header__humburger_active');
     }
   });
 }
@@ -145,6 +146,7 @@ function navClick() {
   navMenu.forEach(menu => {
     menu.addEventListener('click', event => {
       if (event.target.tagName === 'A') {
+        event.preventDefault();
         navLink.forEach(item => {
           item.classList.remove('navigation__item-link_active');
         });
@@ -198,13 +200,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function theme() {
   const logo = document.querySelector('.header__logo-link'),
-        headerWrapper = document.querySelector('.header__top'),
-        actions = document.querySelectorAll('.call');
+        headerRow = document.querySelector('.header'),
+        calls = document.querySelectorAll('.call');
   logo.addEventListener('click', event => {
     event.preventDefault();
-    headerWrapper.classList.toggle('header_light-blue');
-    actions.forEach(item => {
-      console.log(item);
+    headerRow.classList.toggle('header_bg-light-blue');
+    calls.forEach(item => {
       item.classList.toggle('call_light');
     });
   });

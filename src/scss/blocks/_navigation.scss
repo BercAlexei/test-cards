@@ -6,9 +6,7 @@
         padding: 0;
         list-style: none;
         &_vertical {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include position-flex;
         }
     }
 
@@ -40,6 +38,8 @@
                 height: 4px;
                 width: 0;
                 position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
                 bottom: -17px;
                 background: map-get($colors, primary);
                 transition: all 0.5s;

@@ -3,12 +3,12 @@ import showCards from './modules/showCards.js'
 import clickCards from './modules/clickCard.js'
 import humburger from './modules/humburger.js'
 import theme from './modules/theme.js'
-import navClick from './modules/navClick.js'
+import navActive from './modules/navActive.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     showCards();
     clickCards();
     humburger();
     theme();
-    navClick();
+    navActive();
 })

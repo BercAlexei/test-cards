@@ -11,6 +11,7 @@ export default function humburger() {
         document.addEventListener('click', event => {
             if(event.target === overlay) {
                 menu.classList.toggle('menu_active')
+                humburger.classList.remove('header__humburger_active')
             }
         })
 }

@@ -1,4 +1,4 @@
-export default function navClick() {
+export default function navActive() {
     const navMenu = document.querySelectorAll('.navigation'),
           navLink = document.querySelectorAll('.navigation__item-link');
 
@@ -9,7 +9,8 @@ export default function navClick() {
     navMenu.forEach(menu => {
         menu.addEventListener('click', event => {
             if(event.target.tagName === 'A') {
-
+                event.preventDefault()
+                
                 navLink.forEach(item => {
                     item.classList.remove('navigation__item-link_active')
                 });

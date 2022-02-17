@@ -14,9 +14,15 @@
   object-position: $position;
 }
 
-@mixin images-block($display: block, $maxWidth:100%) {
+@mixin images-block($display: block, $maxWidth: 100%) {
   display: block;
   max-width: 100%;
+}
+
+@mixin position-flex($direction: column, $justify-content: center, $text-align: center) {
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  text-align: $text-align;
 }
 
 @mixin make-row() { // строка

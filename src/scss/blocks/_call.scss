@@ -3,9 +3,7 @@
 
     &_vertical {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        @include position-flex;
         margin-top: 40px;
     }
 
@@ -13,14 +11,17 @@
         @include fonts (13px, 20px, 0.8px, map-get($colors, primary));
         text-decoration: none;
         margin-right: 26px;
+
         &:hover {
             color: map-get($colors, primary);
         }
+
         &_order-2 {
             order: 2;
             margin: 0;
             margin-top: 8px;
         }
+        
         #{$root}_light & {
             color: map-get($colors, dark);
         }
