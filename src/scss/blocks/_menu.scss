@@ -2,21 +2,16 @@
     position: fixed;
     right: 0;
     height: 100%;
-    z-index: 10;
-    $root: &;
+    z-index: 50;
 
     &__content {
         position: absolute;
         right: -100vw;
         height: 100%;
-        z-index: 10;
         background: map-get($colors, light);
         padding: 50px 90px 150px;
         transition: all 0.5s;
-
-        #{$root}_active & {
-            right: 0;
-        }
+        z-index: 2;
 
         @include breakpoint-ssm {
             width: 100vw;
@@ -25,16 +20,11 @@
 
     &__overlay {
         position: absolute;
-        right: 0;
-        top: -100vh;
-        z-index: 5;
         width: 100vw;
-        height: 100vh;
+        height: 0;
+        top: 0;
+        right: 0;
         background: rgba(map-get($colors, black), 0.5);
         transition: all 0.5s;
-
-        #{$root}_active & {
-            top: 0;
-        }
     }
 }

@@ -23,7 +23,7 @@
                 display: block;
                 height: 13px;
                 width: 14px;
-                mask: url('../img/arrow.svg') center / cover no-repeat;
+                mask: url('../img/arrow.svg') center / contain no-repeat;
                 background: map-get($colors, dark);
                 transition: all 0.5s;
             }
