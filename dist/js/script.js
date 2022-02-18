@@ -12,24 +12,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ accordion; }
 /* harmony export */ });
+/* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common.js */ "./src/js/modules/common.js");
+
 function accordion() {
-  const accordeonItem = document.querySelectorAll('.accordion__item'),
-        accardeonHead = document.querySelectorAll('.accordion__item-head');
-  accordeonItem.forEach(item => {
-    item.classList.remove('accordeon__item_active');
-  });
-  accardeonHead.forEach(item => {
+  let {
+    accordionItem,
+    accardionHead,
+    classesArray,
+    classesElem
+  } = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  classesArray(accordionItem, 'accordion__item_active', 'remove');
+  accardionHead.forEach(item => {
     item.addEventListener('click', function () {
       if (!this.parentNode.classList.contains('accordion__item_active')) {
-        accordeonItem.forEach(item => {
-          item.classList.remove('accordion__item_active');
-          item.childNodes[1].style.maxHeight = '0px';
-        });
-        this.parentNode.classList.add('accordion__item_active');
-        this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
+        classesArray(accordionItem, 'accordion__item_active', 'remove');
+        classesElem(this.parentNode, 'accordion__item_active', 'add');
       } else {
-        this.parentNode.classList.remove('accordion__item_active');
-        this.nextElementSibling.style.maxHeight = '0px';
+        classesElem(this.parentNode, 'accordion__item_active', 'remove');
       }
     });
   });
@@ -151,6 +150,56 @@ async function cards() {
 
 /***/ }),
 
+/***/ "./src/js/modules/common.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/common.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ common; }
+/* harmony export */ });
+function common() {
+  const accordionItem = document.querySelectorAll('.accordion__item'),
+        accardionHead = document.querySelectorAll('.accordion__item-head'),
+        humburger = document.querySelector('.header__humburger'),
+        menu = document.querySelector('.menu'),
+        overlay = document.querySelector('.menu__overlay'),
+        navMenu = document.querySelectorAll('.navigation'),
+        navLink = document.querySelectorAll('.navigation__item-link'),
+        logo = document.querySelector('.header__logo-link'),
+        headerRow = document.querySelector('.header'),
+        ctas = document.querySelectorAll('.ctas');
+
+  function classesArray(element, classes, action) {
+    element.forEach(item => {
+      item.classList[action](classes);
+    });
+  }
+
+  function classesElem(element, classes, action) {
+    element.classList[action](classes);
+  }
+
+  return {
+    accordionItem,
+    accardionHead,
+    humburger,
+    menu,
+    overlay,
+    navMenu,
+    navLink,
+    logo,
+    headerRow,
+    ctas,
+    classesArray,
+    classesElem
+  };
+}
+
+/***/ }),
+
 /***/ "./src/js/modules/header.js":
 /*!**********************************!*\
   !*** ./src/js/modules/header.js ***!
@@ -161,60 +210,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ header; }
 /* harmony export */ });
+/* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common.js */ "./src/js/modules/common.js");
+
 function header() {
-  //humburger
-  const humburger = document.querySelector('.header__humburger'),
-        menu = document.querySelector('.menu'),
-        overlay = document.querySelector('.menu__overlay');
+  let {
+    humburger,
+    menu,
+    overlay,
+    navMenu,
+    navLink,
+    logo,
+    headerRow,
+    ctas,
+    classesArray,
+    classesElem
+  } = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
   humburger.addEventListener('click', () => {
-    humburger.classList.toggle('header__humburger_active');
-    menu.classList.toggle('menu_active');
+    classesElem(humburger, 'header__humburger_active', 'toggle');
+    classesElem(menu, 'menu_active', 'toggle');
   });
   document.addEventListener('click', event => {
     if (event.target === overlay) {
-      menu.classList.toggle('menu_active');
-      humburger.classList.remove('header__humburger_active');
+      classesElem(menu, 'menu_active', 'toggle');
+      classesElem(humburger, 'header__humburger_active', 'remove');
     }
   });
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 992) {
-      menu.classList.remove('menu_active');
-      humburger.classList.remove('header__humburger_active');
+      classesElem(menu, 'menu_active', 'remove');
+      classesElem(humburger, 'header__humburger_active', 'remove');
     }
   }); //navigation
 
-  const navMenu = document.querySelectorAll('.navigation'),
-        navLink = document.querySelectorAll('.navigation__item-link');
-
-  function removeClass(element) {
-    element.forEach(item => {
-      item.classList.remove('navigation__item-link_active');
-    });
-  }
-
-  removeClass(navLink);
+  classesArray(navLink, 'navigation__item-link_active', 'remove');
   navMenu.forEach(menu => {
     menu.addEventListener('click', event => {
       if (event.target.tagName === 'A') {
         event.preventDefault();
-        removeClass(navLink);
-        event.target.classList.add('navigation__item-link_active');
+        classesArray(navLink, 'navigation__item-link_active', 'remove');
+        classesElem(event.target, 'navigation__item-link_active', 'add');
       }
     });
   }); //theme
 
-  const logo = document.querySelector('.header__logo-link'),
-        headerRow = document.querySelector('.header'),
-        ctas = document.querySelectorAll('.ctas');
   logo.addEventListener('click', event => {
     event.preventDefault();
-    headerRow.classList.toggle('header_bg-light-blue');
-    navMenu.forEach(item => {
-      item.classList.toggle('navigation_light');
-    });
-    ctas.forEach(item => {
-      item.classList.toggle('ctas_light');
-    });
+    classesElem(headerRow, 'header_bg-light-blue', 'toggle');
+    classesArray(navMenu, 'navigation_light', 'toggle');
+    classesArray(ctas, 'ctas_light', 'toggle');
   });
 }
 

@@ -1,28 +1,18 @@
+import common from "./common.js";
+
 export default function accordion() {
-    const accordeonItem = document.querySelectorAll('.accordion__item'),
-        accardeonHead = document.querySelectorAll('.accordion__item-head');
+    let {accordionItem, accardionHead, classesArray, classesElem} = common();
 
-    accordeonItem.forEach(item => {
-        item.classList.remove('accordeon__item_active')
-    })
+    classesArray(accordionItem, 'accordion__item_active', 'remove')
 
-    accardeonHead.forEach(item => {
+    accardionHead.forEach(item => {
         item.addEventListener('click', function () {
 
             if (!this.parentNode.classList.contains('accordion__item_active')) {
-
-                accordeonItem.forEach(item => {
-                    item.classList.remove('accordion__item_active')
-                    item.childNodes[1].style.maxHeight = '0px'
-                })
-
-                this.parentNode.classList.add('accordion__item_active')
-                this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px'
-
+                classesArray(accordionItem, 'accordion__item_active', 'remove')
+                classesElem(this.parentNode, 'accordion__item_active', 'add')
             } else {
-
-                this.parentNode.classList.remove('accordion__item_active')
-                this.nextElementSibling.style.maxHeight = '0px'
+                classesElem(this.parentNode, 'accordion__item_active', 'remove')
             }
         })
     })

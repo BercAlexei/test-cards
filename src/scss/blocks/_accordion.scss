@@ -45,17 +45,18 @@
         }
 
         &-content {
-            max-height: 0;
+            height: 0;
             overflow: hidden;
             opacity: 0;
             padding-right: 18px;
             padding-left: 18px;
             @include fonts(16px, 26px, 0.8px, map-get($colors, dark));
-            transition: all 0.5s, max-height 0.5s;
+            transition: all 0.5s;
 
             #{$root}_active & {
                 opacity: 1;
                 margin-bottom: 20px;
+                height: auto;
             }
 
             @include breakpoint-md {
