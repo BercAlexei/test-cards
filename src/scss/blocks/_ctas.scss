@@ -3,7 +3,7 @@
 
     &_vertical {
         display: flex;
-        @include position-flex;
+        @include display-flex;
         margin-top: 40px;
     }
 
@@ -31,7 +31,11 @@
 
     &__button {
         #{$root}_light & {
-            background: map-get($colors, secondary)
+            background: map-get($colors, secondary);
+
+            &:hover {
+                box-shadow: 1px 1px 15px map-get($colors, secondary);
+            }
         }
     }
 

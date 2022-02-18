@@ -8,11 +8,12 @@ export default async function cards() {
         new cardRender(id + 1, cat, color, img, author, title, descr).render()
     });
 
-    //клик по кариочкам
+    //click card
     let cards = document.querySelector('.cards__wrapper');
 
     cards.addEventListener('click', (event) => {
         if (event.target.getAttribute('data-id') || event.target.tagName == 'A') {
+            event.preventDefault();
             let cardTarget = event.target.closest('.card')
 
             let category = cardTarget.querySelector('.card__category'),

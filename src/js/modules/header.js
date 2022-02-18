@@ -57,6 +57,10 @@ export default function header() {
         event.preventDefault();
         headerRow.classList.toggle('header_bg-light-blue');
 
+        navMenu.forEach(item => {
+            item.classList.toggle('navigation_light')
+        })
+
         ctas.forEach(item => {
             item.classList.toggle('ctas_light');
         })

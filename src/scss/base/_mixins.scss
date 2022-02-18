@@ -19,10 +19,10 @@
   max-width: 100%;
 }
 
-@mixin position-flex($direction: column, $justify-content: center, $text-align: center) {
+@mixin display-flex($direction: column, $justify-content: center, $align-items: center) {
   flex-direction: $direction;
   justify-content: $justify-content;
-  text-align: $text-align;
+  align-items: $align-items;
 }
 
 @mixin make-row() { // строка

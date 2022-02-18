@@ -13,13 +13,8 @@
 
     &_d-flex {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include display-flex(row, space-between, center);
         padding: 15px 0;
-    }
-
-    &_pad-none {
-        padding: 0
     }
 }
 

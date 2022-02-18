@@ -132,11 +132,12 @@ async function cards() {
     descr
   }, id) => {
     new _cardRender_js__WEBPACK_IMPORTED_MODULE_1__["default"](id + 1, cat, color, img, author, title, descr).render();
-  }); //клик по кариочкам
+  }); //click card
 
   let cards = document.querySelector('.cards__wrapper');
   cards.addEventListener('click', event => {
     if (event.target.getAttribute('data-id') || event.target.tagName == 'A') {
+      event.preventDefault();
       let cardTarget = event.target.closest('.card');
       let category = cardTarget.querySelector('.card__category'),
           author = cardTarget.querySelector('.card__author'),
@@ -208,6 +209,9 @@ function header() {
   logo.addEventListener('click', event => {
     event.preventDefault();
     headerRow.classList.toggle('header_bg-light-blue');
+    navMenu.forEach(item => {
+      item.classList.toggle('navigation_light');
+    });
     ctas.forEach(item => {
       item.classList.toggle('ctas_light');
     });

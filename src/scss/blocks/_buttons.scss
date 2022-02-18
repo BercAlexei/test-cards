@@ -6,9 +6,18 @@
     text-align: center;
     transition: all 0.5s;
     white-space: nowrap;
+    $root: &;
+
+    &:hover {
+        box-shadow: 1px 1px 15px map-get($colors, primary);
+    }
 
     &_bg-blue {
         background: map-get($colors, secondary);
+
+        &:hover {
+            box-shadow: 1px 1px 15px map-get($colors, secondary);
+        } 
     }
 
     &_bg-none {
@@ -21,10 +30,6 @@
             margin: 0;
             margin-top: 16px;
         }
-    }
-
-    &:hover {
-        box-shadow: 1px 1px 15px map-get($colors, primary);
     }
 
     @include breakpoint-md {

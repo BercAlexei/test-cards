@@ -1,5 +1,5 @@
 .navigation {
-    padding: 15px 0;
+    $root: &;
 
     &__menu {
         display: flex;
@@ -7,9 +7,9 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        
+
         &_vertical {
-            @include position-flex;
+            @include display-flex;
         }
     }
 
@@ -47,6 +47,10 @@
                 bottom: -2px;
                 background: map-get($colors, primary);
                 transition: all 0.5s;
+
+                #{$root}_light & {
+                    background: map-get($colors, secondary);
+                }
             }
 
             &:hover {
