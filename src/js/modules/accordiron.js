@@ -1,18 +1,22 @@
 import common from "./common.js";
 
 export default function accordion() {
-    let {accordionItem, accardionHead, classesArray, classesElem} = common();
+    let { changeClassItemArray, changeClass } = common();
 
-    classesArray(accordionItem, 'accordion__item_active', 'remove')
+    const accordionItem = document.querySelectorAll('.accordion__item'),
+        accardionHead = document.querySelectorAll('.accordion__item-head'),
+        classActive = 'accordion__item_active';
+
+    changeClassItemArray(accordionItem, classActive, 'remove')
 
     accardionHead.forEach(item => {
         item.addEventListener('click', function () {
 
-            if (!this.parentNode.classList.contains('accordion__item_active')) {
-                classesArray(accordionItem, 'accordion__item_active', 'remove')
-                classesElem(this.parentNode, 'accordion__item_active', 'add')
+            if (!this.parentNode.classList.contains(classActive)) {
+                changeClassItemArray(accordionItem, classActive, 'remove')
+                changeClass(this.parentNode, classActive, 'add')
             } else {
-                classesElem(this.parentNode, 'accordion__item_active', 'remove')
+                changeClass(this.parentNode, classActive, 'remove')
             }
         })
     })

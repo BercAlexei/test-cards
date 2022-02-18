@@ -16,19 +16,20 @@ __webpack_require__.r(__webpack_exports__);
 
 function accordion() {
   let {
-    accordionItem,
-    accardionHead,
-    classesArray,
-    classesElem
+    changeClassItemArray,
+    changeClass
   } = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  classesArray(accordionItem, 'accordion__item_active', 'remove');
+  const accordionItem = document.querySelectorAll('.accordion__item'),
+        accardionHead = document.querySelectorAll('.accordion__item-head'),
+        classActive = 'accordion__item_active';
+  changeClassItemArray(accordionItem, classActive, 'remove');
   accardionHead.forEach(item => {
     item.addEventListener('click', function () {
-      if (!this.parentNode.classList.contains('accordion__item_active')) {
-        classesArray(accordionItem, 'accordion__item_active', 'remove');
-        classesElem(this.parentNode, 'accordion__item_active', 'add');
+      if (!this.parentNode.classList.contains(classActive)) {
+        changeClassItemArray(accordionItem, classActive, 'remove');
+        changeClass(this.parentNode, classActive, 'add');
       } else {
-        classesElem(this.parentNode, 'accordion__item_active', 'remove');
+        changeClass(this.parentNode, classActive, 'remove');
       }
     });
   });
@@ -161,40 +162,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ common; }
 /* harmony export */ });
 function common() {
-  const accordionItem = document.querySelectorAll('.accordion__item'),
-        accardionHead = document.querySelectorAll('.accordion__item-head'),
-        humburger = document.querySelector('.header__humburger'),
-        menu = document.querySelector('.menu'),
-        overlay = document.querySelector('.menu__overlay'),
-        navMenu = document.querySelectorAll('.navigation'),
-        navLink = document.querySelectorAll('.navigation__item-link'),
-        logo = document.querySelector('.header__logo-link'),
-        headerRow = document.querySelector('.header'),
-        ctas = document.querySelectorAll('.ctas');
-
-  function classesArray(element, classes, action) {
+  function changeClassItemArray(element, classes, action) {
     element.forEach(item => {
-      item.classList[action](classes);
+      changeClass(item, classes, action);
     });
   }
 
-  function classesElem(element, classes, action) {
+  function changeClass(element, classes, action) {
     element.classList[action](classes);
   }
 
   return {
-    accordionItem,
-    accardionHead,
-    humburger,
-    menu,
-    overlay,
-    navMenu,
-    navLink,
-    logo,
-    headerRow,
-    ctas,
-    classesArray,
-    classesElem
+    changeClassItemArray,
+    changeClass
   };
 }
 
@@ -214,50 +194,51 @@ __webpack_require__.r(__webpack_exports__);
 
 function header() {
   let {
-    humburger,
-    menu,
-    overlay,
-    navMenu,
-    navLink,
-    logo,
-    headerRow,
-    ctas,
-    classesArray,
-    classesElem
-  } = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    changeClassItemArray,
+    changeClass
+  } = (0,_common_js__WEBPACK_IMPORTED_MODULE_0__["default"])(); // menu
+
+  const humburger = document.querySelector('.header__humburger'),
+        menu = document.querySelector('.menu'),
+        overlay = document.querySelector('.menu__overlay');
   humburger.addEventListener('click', () => {
-    classesElem(humburger, 'header__humburger_active', 'toggle');
-    classesElem(menu, 'menu_active', 'toggle');
+    changeClass(humburger, 'header__humburger_active', 'toggle');
+    changeClass(menu, 'menu_active', 'toggle');
   });
   document.addEventListener('click', event => {
     if (event.target === overlay) {
-      classesElem(menu, 'menu_active', 'toggle');
-      classesElem(humburger, 'header__humburger_active', 'remove');
+      changeClass(menu, 'menu_active', 'toggle');
+      changeClass(humburger, 'header__humburger_active', 'remove');
     }
   });
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 992) {
-      classesElem(menu, 'menu_active', 'remove');
-      classesElem(humburger, 'header__humburger_active', 'remove');
+      changeClass(menu, 'menu_active', 'remove');
+      changeClass(humburger, 'header__humburger_active', 'remove');
     }
   }); //navigation
 
-  classesArray(navLink, 'navigation__item-link_active', 'remove');
+  const navMenu = document.querySelectorAll('.navigation'),
+        navLink = document.querySelectorAll('.navigation__item-link');
+  changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
   navMenu.forEach(menu => {
     menu.addEventListener('click', event => {
       if (event.target.tagName === 'A') {
         event.preventDefault();
-        classesArray(navLink, 'navigation__item-link_active', 'remove');
-        classesElem(event.target, 'navigation__item-link_active', 'add');
+        changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
+        changeClass(event.target, 'navigation__item-link_active', 'add');
       }
     });
   }); //theme
 
+  const logo = document.querySelector('.header__logo-link'),
+        headerRow = document.querySelector('.header'),
+        ctas = document.querySelectorAll('.ctas');
   logo.addEventListener('click', event => {
     event.preventDefault();
-    classesElem(headerRow, 'header_bg-light-blue', 'toggle');
-    classesArray(navMenu, 'navigation_light', 'toggle');
-    classesArray(ctas, 'ctas_light', 'toggle');
+    changeClass(headerRow, 'header_bg-light-blue', 'toggle');
+    changeClassItemArray(navMenu, 'navigation_light', 'toggle');
+    changeClassItemArray(ctas, 'ctas_light', 'toggle');
   });
 }
 
