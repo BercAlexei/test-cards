@@ -217,13 +217,14 @@ async function header() {
     }
   }); // navigation
 
-  const navLink = document.querySelectorAll('.navigation__item-link');
-  changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
+  const navLink = document.querySelectorAll('.navigation__item-link'),
+        classActive = 'navigation__item-link_active';
+  changeClassItemArray(navLink, classActive, 'remove');
   navLink.forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
-      changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
-      changeClass(event.target, 'navigation__item-link_active', 'add');
+      changeClassItemArray(navLink, classActive, 'remove');
+      changeClass(event.target, classActive, 'add');
     });
   });
 }
