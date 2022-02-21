@@ -1,6 +1,24 @@
 .ctas {
     $root: &;
 
+    .header_light &,
+    .header_light + .menu & {
+        .ctas {
+            &__tel {
+                color: map-get($colors, dark);
+            }
+
+            &__button {
+                background: map-get($colors, secondary);
+
+                &:hover {
+                    box-shadow: 1px 1px 15px map-get($colors, secondary);
+                }
+            }
+        }
+
+    }
+
     &_vertical {
         display: flex;
         @include display-flex;

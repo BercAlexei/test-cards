@@ -217,16 +217,13 @@ async function header() {
     }
   }); // navigation
 
-  const navMenu = document.querySelectorAll('.navigation'),
-        navLink = document.querySelectorAll('.navigation__item-link');
+  const navLink = document.querySelectorAll('.navigation__item-link');
   changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
-  navMenu.forEach(menu => {
-    menu.addEventListener('click', event => {
-      if (event.target.tagName === 'A') {
-        event.preventDefault();
-        changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
-        changeClass(event.target, 'navigation__item-link_active', 'add');
-      }
+  navLink.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      changeClassItemArray(navLink, 'navigation__item-link_active', 'remove');
+      changeClass(event.target, 'navigation__item-link_active', 'add');
     });
   });
 }

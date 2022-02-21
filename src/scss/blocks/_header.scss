@@ -5,68 +5,6 @@
     box-shadow: 0 0 8px rgba(1, 1, 1, 0.2);
     $root: &;
 
-    &_open+.menu {
-        .menu__content {
-            right: 0;
-        }
-
-        .menu__overlay {
-            height: 100%;
-        }
-    }
-
-    &_light {
-        .ctas {
-            &__tel {
-                color: map-get($colors, dark);
-            }
-        }
-
-        .button {
-            background: map-get($colors, secondary);
-
-            &:hover {
-                box-shadow: 1px 1px 15px map-get($colors, secondary);
-            }
-        }
-
-        .navigation {
-            &__item {
-                &-link {
-                    &:after {
-                        background: map-get($colors, secondary);
-                    }
-                }
-            }
-        }
-
-        &+.menu {
-            .navigation {
-                &__item {
-                    &-link {
-                        &:after {
-                            background: map-get($colors, secondary);
-                        }
-                    }
-                }
-            }
-
-            .ctas {
-                &__tel {
-                    color: map-get($colors, dark);
-                }
-
-                &__button {
-                    background: map-get($colors, secondary);
-
-                    &:hover {
-                        box-shadow: 1px 1px 15px map-get($colors, secondary);
-                    }
-                }
-            }
-        }
-    }
-
     &__row {
         transition: all 0.5s;
 

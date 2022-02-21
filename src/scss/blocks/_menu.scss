@@ -27,4 +27,17 @@
         background: rgba(map-get($colors, black), 0.5);
         transition: all 0.5s;
     }
+
+    .header_open + & {
+        .menu {
+            &__content {
+                right: 0;
+            }
+
+            &__overlay {
+                height: 100%;
+            }
+        }
+
+    }
 }

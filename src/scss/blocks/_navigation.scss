@@ -1,4 +1,16 @@
 .navigation {
+    .header_light &,
+    .header_light + .menu & {
+        .navigation {
+            &__item {
+                &-link {
+                    &:after {
+                        background: map-get($colors, secondary);
+                    }
+                }
+            }
+        }
+    }
 
     &__menu {
         display: flex;
