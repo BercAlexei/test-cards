@@ -30,6 +30,16 @@
             }
         }
 
+        .navigation {
+            &__item {
+                &-link {
+                    &:after {
+                        background: map-get($colors, secondary);
+                    }
+                }
+            }
+        }
+
         &+.menu {
             .navigation {
                 &__item {
