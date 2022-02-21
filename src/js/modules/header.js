@@ -34,10 +34,10 @@ export default async function header() {
 
     navLink.forEach(link => {
         link.addEventListener('click', event => {
-                event.preventDefault()
-    
-                changeClassItemArray(navLink, 'navigation__item-link_active', 'remove')
-                changeClass(event.target, 'navigation__item-link_active', 'add')
+            event.preventDefault()
+
+            changeClassItemArray(navLink, 'navigation__item-link_active', 'remove')
+            changeClass(event.target, 'navigation__item-link_active', 'add')
         });
     })
 }
